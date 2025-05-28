@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery/controller/utils/constants/app_colors/app_colors.dart';
 
 class GreenButton extends StatelessWidget {
@@ -9,7 +10,7 @@ class GreenButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 18),
         height: 60,
@@ -21,7 +22,10 @@ class GreenButton extends StatelessWidget {
             ]),
             borderRadius: BorderRadius.circular(5)),
         child: Center(
-          child: Text(''),
+          child: Text(
+            '',
+            style: GoogleFonts.poppins(color: AppColors.whiteColor),
+          ),
         ),
       ),
     );
