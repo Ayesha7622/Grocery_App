@@ -23,7 +23,7 @@ class GreenButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(5)),
         child: Center(
           child: Text(
-            '',
+            text,
             style: GoogleFonts.poppins(color: AppColors.whiteColor),
           ),
         ),
