@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:grocery/controller/utils/constants/app_colors/app_colors.dart';
 
 class GreenButton extends StatelessWidget {
-  const GreenButton({super.key});
+  final String text;
+  final VoidCallback onTap;
+  const GreenButton({super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +15,13 @@ class GreenButton extends StatelessWidget {
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
-            color: AppColors.primarygreenColor,
+            gradient: LinearGradient(colors: [
+              AppColors.primarygreenColor,
+              AppColors.secondarygreenColor
+            ]),
             borderRadius: BorderRadius.circular(5)),
         child: Center(
-          child: Text(
-            'Get Started',
-          ),
+          child: Text(''),
         ),
       ),
     );
