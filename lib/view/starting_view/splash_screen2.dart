@@ -14,8 +14,8 @@ class SplashScreen2Class extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-            image:
-                DecorationImage(image: AssetImage(AppImages.markusSpiskImage))),
+            image: DecorationImage(
+                image: AssetImage(AppImages.markusSpisk2Image))),
         child: Column(
           children: [
             SizedBox(
