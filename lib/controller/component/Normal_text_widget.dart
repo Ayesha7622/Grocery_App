@@ -5,8 +5,13 @@ class NormalText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [Text('Get Discounts'), Text('On All Product')],
+    return Center(
+      child: Row(
+        children: [
+          Text('Lorem ipsum dolor sit amet , consetetur'),
+          Text('sadipscing elitr , sed diam nonumy')
+        ],
+      ),
     );
   }
 }
