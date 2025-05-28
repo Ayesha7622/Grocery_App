@@ -18,6 +18,9 @@ class Splash_Screen_Project extends StatelessWidget {
                 DecorationImage(image: AssetImage(AppImages.markusSpiskImage))),
         child: Column(
           children: [
+            SizedBox(
+              height: 60,
+            ),
             BoldText(text: 'Get Discounts\nOn All Products'),
             SizedBox(
               height: 10,
@@ -26,7 +29,10 @@ class Splash_Screen_Project extends StatelessWidget {
                 text:
                     'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
             Spacer(),
-            GreenButton(text: 'Get Started', onTap: () {})
+            GreenButton(text: 'Get Started', onTap: () {}),
+            SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),
