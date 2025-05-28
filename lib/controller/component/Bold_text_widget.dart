@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery/controller/utils/constants/app_colors/app_colors.dart';
 
 class BoldText extends StatelessWidget {
   final String text;
@@ -6,6 +8,10 @@ class BoldText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text);
+    return Text(text,
+        style: GoogleFonts.poppins(
+            fontSize: 25,
+            fontWeight: FontWeight.w500,
+            color: AppColors.blackColor));
   }
 }
