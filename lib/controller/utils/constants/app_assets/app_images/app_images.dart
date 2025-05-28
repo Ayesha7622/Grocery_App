@@ -1,4 +1,4 @@
 class AppImages {
   static String base = 'assets/appImages/';
-  static String markusSpiskImage = '${base}markus-spiske.png';
+  static String markusSpiskImage = 'assets/appImages/markus-spiske.png';
 }
