@@ -10,34 +10,44 @@ class SpalshScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
-          flex: 50,
-          child: Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(AppImages.element5Image))),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 60,
-                ),
-                BoldText(text: 'Buy Premium\nQuality Fruits'),
-                SizedBox(
-                  height: 10,
-                ),
-                NormalText(
-                    text:
-                        'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-                Spacer(),
-                GreenButton(text: 'Get Started', onTap: () {}),
-                SizedBox(
-                  height: 20,
-                )
-              ],
+      body: Column(
+        children: [
+          Expanded(
+              flex: 50,
+              child: Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(AppImages.element5Image))))),
+          Expanded(
+            flex: 50,
+            child: Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 60,
+                  ),
+                  BoldText(text: 'Buy Premium\nQuality Fruits'),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  NormalText(
+                      text:
+                          'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+                  Spacer(),
+                  GreenButton(text: 'Get Started', onTap: () {}),
+                  SizedBox(
+                    height: 20,
+                  )
+                ],
+              ),
             ),
-          )),
+          ),
+        ],
+      ),
     );
   }
 }
