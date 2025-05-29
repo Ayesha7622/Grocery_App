@@ -20,6 +20,16 @@ class OnBoradingWidget extends StatelessWidget {
               image: AppImages.deliveryImage,
               heading: ' Fast Delivery',
               description:
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+          OnBoradingWidget(
+              image: AppImages.deliveryImage,
+              heading: ' Buy Grocery',
+              description:
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+          OnBoradingWidget(
+              image: AppImages.deliveryImage,
+              heading: ' Enjoy Quality Food',
+              description:
                   'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy')
         ],
       ),
