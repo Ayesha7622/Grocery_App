@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:grocery/controller/utils/constants/app_colors/app_colors.dart';
+import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
 class GreenButton extends StatelessWidget {
   final String text;

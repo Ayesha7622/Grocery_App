@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/view/starting_view/spalsh_screen3.dart';
-import 'package:grocery/view/starting_view/splash_screen2.dart';
-import 'package:grocery/view/starting_view/splash_view.dart';
+import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 
 void main() {
   runApp(const MyApp());

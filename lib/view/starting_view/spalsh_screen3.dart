@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/controller/component/Bold_text_widget.dart';
-import 'package:grocery/controller/component/Green_button_widget.dart';
-import 'package:grocery/controller/component/Normal_text_widget.dart';
-import 'package:grocery/controller/utils/constants/app_assets/app_images/app_images.dart';
+import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
+import 'package:newgroceryapp/controller/component/Green_button_widget.dart';
+import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 
 class SpalshScreen3 extends StatelessWidget {
   const SpalshScreen3({super.key});
