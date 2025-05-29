@@ -22,7 +22,8 @@ class SpalshScreen3 extends StatelessWidget {
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20)),
                       image: DecorationImage(
-                          image: AssetImage(AppImages.element5Image))))),
+                          image: AssetImage(
+                              'assets/appImages/markus-spiske2.png'))))),
           Expanded(
             flex: 50,
             child: Container(
