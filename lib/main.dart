@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/view/starting_view/spalsh_screen3.dart';
 import 'package:grocery/view/starting_view/splash_screen2.dart';
 import 'package:grocery/view/starting_view/splash_view.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: SplashScreen2Class() //Splash_Screen_Project(),
+        home: SpalshScreen3() //SplashScreen2Class() //Splash_Screen_Project(),
         );
   }
 }

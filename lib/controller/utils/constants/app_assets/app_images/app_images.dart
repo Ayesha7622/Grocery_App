@@ -4,4 +4,3 @@ class AppImages {
   static String markusSpisk2Image = 'assets/appImages/markus-spiske2.png';
   static String element5Image = 'assets/appImages/element5.png';
 }
-}
