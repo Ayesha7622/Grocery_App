@@ -2,14 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 
 class OnBoradingWidget extends StatelessWidget {
-  final String image;
-  final String heading;
-  final String description;
-  const OnBoradingWidget(
-      {super.key,
-      required this.image,
-      required this.heading,
-      required this.description});
+  const OnBoradingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
