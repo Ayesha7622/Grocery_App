@@ -43,24 +43,21 @@ class BoradingWidgetScreen extends StatelessWidget {
     return Scaffold(
       body: PageView(
         children: [
-          SizedBox(
-            height: 30,
-          ),
-          BoardingWidget(
-              image: AppImages.deliveryImage,
-              heading: ' Fast Delivery',
-              description:
-                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
           BoardingWidget(
               image: AppImages.onlineImage,
               heading: ' Buy Grocery',
               description:
                   'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
           BoardingWidget(
+              image: AppImages.deliveryImage,
+              heading: ' Fast Delivery',
+              description:
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+          BoardingWidget(
               image: AppImages.passionateImage,
               heading: ' Enjoy Quality Food',
               description:
-                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy')
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
         ],
       ),
     );

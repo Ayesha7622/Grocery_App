@@ -20,14 +20,20 @@ class BoardingWidget extends StatelessWidget {
         children: [
           Column(
             children: [
+              SizedBox(
+                height: 60,
+              ),
               Image(image: AssetImage(image)),
               Spacer(),
               BoldText(
                 text: heading,
               ),
+              SizedBox(
+                height: 10,
+              ),
               NormalText(text: description),
               SizedBox(
-                height: 30,
+                height: 40,
               )
             ],
           )
