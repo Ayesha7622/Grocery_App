@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
+import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,8 +35,10 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:
-            BoradingWidgetScreen() //SpalshScreen3() //SplashScreen2Class() //Splash_Screen_Project(),
+        home: BoradingWidgetScreen()
+        ////SpalshScreen3() /
+        //SplashScreen2Class()
+        /////Splash_Screen_Project(),
         );
   }
 }

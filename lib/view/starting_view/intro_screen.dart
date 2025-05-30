@@ -43,6 +43,9 @@ class BoradingWidgetScreen extends StatelessWidget {
     return Scaffold(
       body: PageView(
         children: [
+          SizedBox(
+            height: 30,
+          ),
           BoardingWidget(
               image: AppImages.deliveryImage,
               heading: ' Fast Delivery',
