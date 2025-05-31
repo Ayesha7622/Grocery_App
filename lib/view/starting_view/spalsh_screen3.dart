@@ -17,9 +17,6 @@ class SpalshScreen3 extends StatelessWidget {
                   height: double.infinity,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20)),
                       image: DecorationImage(
                           image: AssetImage(
                               'assets/appImages/markus-spiske2.png'))))),
@@ -28,6 +25,11 @@ class SpalshScreen3 extends StatelessWidget {
             child: Container(
               height: double.infinity,
               width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
+              ),
               child: Column(
                 children: [
                   SizedBox(
