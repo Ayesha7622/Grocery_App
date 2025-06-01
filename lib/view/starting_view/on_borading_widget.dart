@@ -21,7 +21,7 @@ class BoardingWidget extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 60,
+                height: 200,
               ),
               Image(image: AssetImage(image)),
               Spacer(),
