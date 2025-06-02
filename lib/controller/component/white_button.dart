@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
 class WhiteButton extends StatelessWidget {
@@ -19,7 +20,7 @@ class WhiteButton extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Icon(Icons.),
+            //Icon(AppIcons.google),
             Center(
                 child: Text('data',
                     style: GoogleFonts.poppins(color: AppColors.blackColor))),
