@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
+import 'package:newgroceryapp/controller/component/Green_button_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/component/white_button.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
@@ -38,7 +39,11 @@ class _StackScreenState extends State<StackScreen> {
                       text:
                           'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
                   WhiteButton(
-                    text: 'Continue with Google',
+                    text: 'Continue with google',
+                    onTap: () {},
+                  ),
+                  GreenButton(
+                    text: 'Create an account',
                     onTap: () {},
                   )
                 ],
