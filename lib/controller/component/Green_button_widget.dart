@@ -24,7 +24,8 @@ class GreenButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: GoogleFonts.poppins(color: AppColors.whiteColor),
+            style:
+                GoogleFonts.poppins(color: AppColors.whiteColor, fontSize: 17),
           ),
         ),
       ),

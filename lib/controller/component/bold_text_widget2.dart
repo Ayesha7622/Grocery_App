@@ -2,21 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
-class BoldText extends StatelessWidget {
+class BoldText2 extends StatelessWidget {
   final String text;
-  final TextAlign textalign;
-  // int a;
-  // a=56;
-  const BoldText(
-      {super.key, required this.text, this.textalign = TextAlign.center});
+  const BoldText2({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(text,
-        textAlign: textalign,
+        textAlign: TextAlign.center,
         style: GoogleFonts.poppins(
-            fontSize: 25,
-            fontWeight: FontWeight.w700,
+            fontSize: 17,
+            fontWeight: FontWeight.w500,
             color: AppColors.blackColor));
   }
 }

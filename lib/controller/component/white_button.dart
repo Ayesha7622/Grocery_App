@@ -13,16 +13,22 @@ class WhiteButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 18),
+        margin: EdgeInsets.symmetric(horizontal: 10),
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.white2Color,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(10),
         ),
-        child: Center(
-            child: Text(text,
-                style: GoogleFonts.poppins(color: AppColors.blackColor))),
+        child: Row(
+          children: [
+            Image.asset(AppIcons.google),
+            Text(text,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                    color: AppColors.blackColor, fontSize: 17)),
+          ],
+        ),
       ),
     );
   }

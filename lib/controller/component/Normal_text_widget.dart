@@ -4,15 +4,19 @@ import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.d
 
 class NormalText extends StatelessWidget {
   final String text;
-  const NormalText({super.key, required this.text});
+  final TextAlign textAlign;
+  final Color textColor;
+  const NormalText(
+      {super.key,
+      required this.text,
+      this.textAlign = TextAlign.center,
+      this.textColor = AppColors.greyColor});
 
   @override
   Widget build(BuildContext context) {
     return Text(text,
-        textAlign: TextAlign.center,
+        textAlign: textAlign,
         style: GoogleFonts.poppins(
-            fontSize: 15,
-            fontWeight: FontWeight.w500,
-            color: AppColors.greyColor));
+            fontSize: 15, fontWeight: FontWeight.w500, color: textColor));
   }
 }

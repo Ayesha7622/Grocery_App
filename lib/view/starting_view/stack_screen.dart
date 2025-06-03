@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Green_button_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
+import 'package:newgroceryapp/controller/component/bold_text_widget2.dart';
+import 'package:newgroceryapp/controller/component/normal_text_widget2.dart';
+import 'package:newgroceryapp/controller/component/normal_white.dart';
 import 'package:newgroceryapp/controller/component/white_button.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
@@ -48,64 +51,71 @@ class _StackScreenState extends State<StackScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Center(
-                  child: Text(
-                    'Welcome',
-                    style: GoogleFonts.poppins(color: AppColors.whiteColor),
-                  ),
+                child: NormalText3(
+                  text: 'Welcome',
                 ),
               ),
             ]),
             Spacer(),
             Container(
-                height: 400,
+                //  height: 400,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 )),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 160,
-                    ),
-                    (BoldText(text: 'Welcome')),
-                    NormalText(
-                        text:
-                            'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: WhiteButton(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 18.0, vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 150,
+                      ),
+                      BoldText(
+                        text: 'Welcome',
+                        textalign: TextAlign.start,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      NormalText(
+                          textAlign: TextAlign.start,
+                          text:
+                              'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy'),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      WhiteButton(
                         text: 'Continue with google',
                         onTap: () {},
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: GreenButton(
+                      SizedBox(
+                        height: 10,
+                      ),
+                      GreenButton(
                         text: 'Create an account',
                         onTap: () {},
                       ),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            children: [
-                              Center(
-                                child: NormalText(
-                                  text: 'Already have an account?',
-                                ),
-                              ),
-                              Center(child: BoldText(text: 'Login')),
-                            ],
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          NormalText2(
+                            text: 'Already have an account?',
                           ),
-                        ),
-                      ],
-                    )
-                  ],
+                          SizedBox(
+                            width: 2,
+                          ),
+                          BoldText2(text: 'Login'),
+                        ],
+                      )
+                    ],
+                  ),
                 ))
           ],
         )
