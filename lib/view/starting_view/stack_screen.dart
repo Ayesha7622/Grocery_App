@@ -18,70 +18,67 @@ class _StackScreenState extends State<StackScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 5),
-            child: Image.asset(
-              AppImages.beautifulImage,
-              fit: BoxFit.cover,
-            ),
+        body: Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: Image.asset(
+            AppImages.beautifulImage,
+            fit: BoxFit.cover,
           ),
-          // SizedBox(
-          //   height: 30,
-          // ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Icon(Icons.arrow_back),
-                  Center(
-                    child: Text(
-                      'Welcome',
-                      style: GoogleFonts.poppins(color: AppColors.whiteColor),
+        ),
+        // SizedBox(
+        //   height: 30,
+        // ),
+        Column(
+          children: [
+            Row(children: [
+              Icon(Icons.arrow_back),
+              Center(
+                child: Text(
+                  'Welcome',
+                  style: GoogleFonts.poppins(color: AppColors.whiteColor),
+                ),
+              ),
+            ]),
+            Spacer(),
+            Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                )),
+                child: Column(
+                  children: [
+                    BoldText(text: 'Welcome'),
+                    NormalText(
+                        text:
+                            'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+                    WhiteButton(
+                      text: 'Continue with google',
+                      onTap: () {},
                     ),
-                  ),
-                  Spacer(),
-                  Container(
-                      height: double.infinity,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                      )),
-                      child: Column(
-                        children: [
-                          BoldText(text: 'Welcome'),
-                          NormalText(
-                              text:
-                                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-                          WhiteButton(
-                            text: 'Continue with google',
-                            onTap: () {},
+                    GreenButton(
+                      text: 'Create an account',
+                      onTap: () {},
+                    ),
+                    Column(
+                      children: [
+                        Center(
+                          child: NormalText(
+                            text: 'Already have an account',
                           ),
-                          GreenButton(
-                            text: 'Create an account',
-                            onTap: () {},
-                          ),
-                          Column(
-                            children: [
-                              Center(
-                                child: NormalText(
-                                  text: 'Already have an account',
-                                ),
-                              ),
-                              Center(child: BoldText(text: 'Login')),
-                            ],
-                          )
-                        ],
-                      ))
-                ],
-              )
-            ],
-          )
-        ],
-      ),
-    );
+                        ),
+                        Center(child: BoldText(text: 'Login')),
+                      ],
+                    )
+                  ],
+                ))
+          ],
+        )
+      ],
+    ));
   }
 }
