@@ -17,17 +17,12 @@ class WhiteButton extends StatelessWidget {
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.whiteColor,
+          color: AppColors.white2Color,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Row(
-          children: [
-            //Icon(AppIcons.google),
-            Center(
-                child: Text(text,
-                    style: GoogleFonts.poppins(color: AppColors.blackColor))),
-          ],
-        ),
+        child: Center(
+            child: Text(text,
+                style: GoogleFonts.poppins(color: AppColors.blackColor))),
       ),
     );
   }

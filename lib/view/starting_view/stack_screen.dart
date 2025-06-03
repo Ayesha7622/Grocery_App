@@ -32,19 +32,34 @@ class _StackScreenState extends State<StackScreen> {
         // ),
         Column(
           children: [
+            SizedBox(
+              height: 30,
+            ),
             Row(children: [
-              Icon(Icons.arrow_back),
-              Center(
-                child: Text(
-                  'Welcome',
-                  style: GoogleFonts.poppins(color: AppColors.whiteColor),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                width: 100,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text(
+                    'Welcome',
+                    style: GoogleFonts.poppins(color: AppColors.whiteColor),
+                  ),
                 ),
               ),
             ]),
             Spacer(),
             Container(
-                // height: double.infinity,
-                // width: double.infinity,
+                height: 400,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
@@ -52,26 +67,42 @@ class _StackScreenState extends State<StackScreen> {
                 )),
                 child: Column(
                   children: [
-                    BoldText(text: 'Welcome'),
+                    SizedBox(
+                      height: 160,
+                    ),
+                    (BoldText(text: 'Welcome')),
                     NormalText(
                         text:
                             'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-                    WhiteButton(
-                      text: 'Continue with google',
-                      onTap: () {},
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: WhiteButton(
+                        text: 'Continue with google',
+                        onTap: () {},
+                      ),
                     ),
-                    GreenButton(
-                      text: 'Create an account',
-                      onTap: () {},
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GreenButton(
+                        text: 'Create an account',
+                        onTap: () {},
+                      ),
                     ),
                     Column(
                       children: [
-                        Center(
-                          child: NormalText(
-                            text: 'Already have an account',
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Center(
+                                child: NormalText(
+                                  text: 'Already have an account?',
+                                ),
+                              ),
+                              Center(child: BoldText(text: 'Login')),
+                            ],
                           ),
                         ),
-                        Center(child: BoldText(text: 'Login')),
                       ],
                     )
                   ],
