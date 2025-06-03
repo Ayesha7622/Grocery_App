@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
+import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
+import 'package:newgroceryapp/controller/component/white_button.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
@@ -28,6 +31,15 @@ class _StackScreenState extends State<StackScreen> {
                   Text(
                     'Welcome',
                     style: GoogleFonts.poppins(color: AppColors.whiteColor),
+                  ),
+                  Spacer(),
+                  BoldText(text: 'Welacome'),
+                  NormalText(
+                      text:
+                          'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+                  WhiteButton(
+                    text: 'Continue with Google',
+                    onTap: () {},
                   )
                 ],
               )
