@@ -20,9 +20,15 @@ class _StackScreenState extends State<StackScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            AppImages.beautifulImage,
-            fit: BoxFit.cover,
+          Padding(
+            padding: const EdgeInsets.only(right: ),
+            child: Image.asset(
+              AppImages.beautifulImage,
+              fit: BoxFit.cover,
+            ),
+          ),
+          SizedBox(
+            height: 30,
           ),
           Column(
             children: [
@@ -36,7 +42,13 @@ class _StackScreenState extends State<StackScreen> {
                     ),
                   ),
                   Spacer(),
-                  BoldText(text: 'Welcome'),
+                  Container(height: double.infinity,
+                  width: double.infinity,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10),
+                  )
+                  ),
+                  child: Column(children: [
+                    BoldText(text: 'Welcome'),
                   NormalText(
                       text:
                           'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
@@ -58,6 +70,10 @@ class _StackScreenState extends State<StackScreen> {
                       Center(child: BoldText(text: 'Login')),
                     ],
                   )
+
+                  ],)
+                    )
+                  
                 ],
               )
             ],
