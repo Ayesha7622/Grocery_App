@@ -3,9 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Green_button_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
-import 'package:newgroceryapp/controller/component/bold_text_widget2.dart';
-import 'package:newgroceryapp/controller/component/normal_text_widget2.dart';
-import 'package:newgroceryapp/controller/component/normal_white.dart';
 import 'package:newgroceryapp/controller/component/white_button.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
@@ -105,13 +102,15 @@ class _StackScreenState extends State<StackScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          NormalText2(
+                          NormalText(
                             text: 'Already have an account?',
                           ),
                           SizedBox(
                             width: 2,
                           ),
-                          BoldText2(text: 'Login'),
+                          BoldText(
+                            text: 'Login',
+                          ),
                         ],
                       )
                     ],
