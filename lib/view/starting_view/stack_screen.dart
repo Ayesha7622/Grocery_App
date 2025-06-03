@@ -43,8 +43,8 @@ class _StackScreenState extends State<StackScreen> {
             ]),
             Spacer(),
             Container(
-                height: double.infinity,
-                width: double.infinity,
+                // height: double.infinity,
+                // width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
