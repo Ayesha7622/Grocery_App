@@ -29,9 +29,11 @@ class _StackScreenState extends State<StackScreen> {
               Row(
                 children: [
                   Icon(Icons.arrow_back),
-                  Text(
-                    'Welcome',
-                    style: GoogleFonts.poppins(color: AppColors.whiteColor),
+                  Center(
+                    child: Text(
+                      'Welcome',
+                      style: GoogleFonts.poppins(color: AppColors.whiteColor),
+                    ),
                   ),
                   Spacer(),
                   BoldText(text: 'Welcome'),
@@ -45,6 +47,16 @@ class _StackScreenState extends State<StackScreen> {
                   GreenButton(
                     text: 'Create an account',
                     onTap: () {},
+                  ),
+                  Column(
+                    children: [
+                      Center(
+                        child: NormalText(
+                          text: 'Already have an account',
+                        ),
+                      ),
+                      Center(child: BoldText(text: 'Login')),
+                    ],
                   )
                 ],
               )

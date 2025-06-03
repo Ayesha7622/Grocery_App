@@ -3,6 +3,7 @@ import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';
 import 'package:newgroceryapp/view/starting_view/splash_view.dart';
+import 'package:newgroceryapp/view/starting_view/stack_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,9 +39,9 @@ class MyApp extends StatelessWidget {
         ),
         home: //BoradingWidgetScreen()
             //SpalshScreen3()
-            SplashScreen2Class()
-        //Splash_Screen_Project(),
-        );
+            //SplashScreen2Class()
+            //Splash_Screen_Project(),
+            StackScreen());
   }
 }
 

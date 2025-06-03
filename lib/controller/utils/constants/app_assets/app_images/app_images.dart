@@ -6,5 +6,5 @@ class AppImages {
   static String onlineImage = 'assets/appImages/Online.png';
   static String passionateImage = 'assets/appImages/Passionate.png';
   static String deliveryImage = 'assets/appImages/Delivery.png';
-  static String beautifulImage = 'assets/appImages/beautiful_female.png';
+  static String beautifulImage = 'assets/appImages/beautiful-female.png';
 }
