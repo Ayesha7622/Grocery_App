@@ -13,7 +13,12 @@ class _StackScreenState extends State<StackScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [Image.asset(AppImages.beautifulImage)],
+        children: [
+          Image.asset(
+            AppImages.beautifulImage,
+            fit: BoxFit.cover,
+          )
+        ],
       ),
     );
   }
