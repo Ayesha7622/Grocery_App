@@ -6,9 +6,11 @@ class NormalText extends StatelessWidget {
   final String text;
   final TextAlign textAlign;
   final Color textColor;
+  final FontWeight fontWeight;
   const NormalText(
       {super.key,
       required this.text,
+      this.fontWeight = FontWeight.w500,
       this.textAlign = TextAlign.center,
       this.textColor = AppColors.greyColor});
 
@@ -17,6 +19,6 @@ class NormalText extends StatelessWidget {
     return Text(text,
         textAlign: textAlign,
         style: GoogleFonts.poppins(
-            fontSize: 15, fontWeight: FontWeight.w500, color: textColor));
+            fontSize: 15, fontWeight: fontWeight, color: textColor));
   }
 }

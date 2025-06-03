@@ -48,8 +48,10 @@ class _StackScreenState extends State<StackScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: NormalText3(
+                child: NormalText(
                   text: 'Welcome',
+                  textColor: AppColors.whiteColor,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ]),
@@ -63,8 +65,8 @@ class _StackScreenState extends State<StackScreen> {
                   topRight: Radius.circular(10),
                 )),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 18.0, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 18.0, vertical: 6),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -104,12 +106,15 @@ class _StackScreenState extends State<StackScreen> {
                         children: [
                           NormalText(
                             text: 'Already have an account?',
+                            fontWeight: FontWeight.w300,
                           ),
                           SizedBox(
                             width: 2,
                           ),
                           BoldText(
                             text: 'Login',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
                           ),
                         ],
                       )

@@ -22,11 +22,23 @@ class WhiteButton extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image.asset(AppIcons.google),
-            Text(text,
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                    color: AppColors.blackColor, fontSize: 17)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                AppIcons.google,
+                height: 30,
+              ),
+            ),
+            SizedBox(
+              width: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(text,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                      color: AppColors.blackColor, fontSize: 17)),
+            ),
           ],
         ),
       ),
