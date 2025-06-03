@@ -24,7 +24,7 @@ class WhiteButton extends StatelessWidget {
           children: [
             //Icon(AppIcons.google),
             Center(
-                child: Text('data',
+                child: Text(text,
                     style: GoogleFonts.poppins(color: AppColors.blackColor))),
           ],
         ),
