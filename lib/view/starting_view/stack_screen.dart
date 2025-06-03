@@ -34,7 +34,7 @@ class _StackScreenState extends State<StackScreen> {
                     style: GoogleFonts.poppins(color: AppColors.whiteColor),
                   ),
                   Spacer(),
-                  BoldText(text: 'Welacome'),
+                  BoldText(text: 'Welcome'),
                   NormalText(
                       text:
                           'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
