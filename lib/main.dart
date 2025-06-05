@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:newgroceryapp/view/auth_views/login_stack.dart';
+import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
@@ -42,7 +44,9 @@ class MyApp extends StatelessWidget {
             //SplashScreen2Class()
             //Splash_Screen_Project(),
             //PasswordClassNew()
-            StackScreen());
+            //StackScreen()
+            //StackScreen2()
+            StackScreen3());
   }
 }
 
@@ -76,9 +80,9 @@ class _PasswordClassNewState extends State<PasswordClassNew> {
                       }
                       setState(() {});
                     },
-                    icon: isSecure == true
+                    icon: Icon(isSecure == true
                         ? Icons.remove_red_eye
-                        : Icons.visibility_off)),
+                        : Icons.visibility_off))),
           ),
         ),
       ),

@@ -41,17 +41,22 @@ class _StackScreen2State extends State<StackScreen2> {
                   color: Colors.white,
                 ),
               ),
-              Spacer(),
+              SizedBox(
+                width: 100,
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: NormalText(
                   text: 'Welcome',
                   textColor: AppColors.whiteColor,
                   fontWeight: FontWeight.w500,
+                  fontSize: 20,
                 ),
               ),
             ]),
-            Spacer(),
+            SizedBox(
+              height: 430,
+            ),
             Container(
                 //  height: 400,
                 width: double.infinity,
@@ -61,33 +66,50 @@ class _StackScreen2State extends State<StackScreen2> {
                   topRight: Radius.circular(10),
                 )),
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 18.0, vertical: 6),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 18.0, vertical: 15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        height: 150,
-                      ),
                       NormalText(
                         textAlign: TextAlign.start,
                         text: 'Sign into your account',
+                        fontSize: 23,
                         textColor: AppColors.greyColor,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 40,
                       ),
                       TextFormField(
+                        style: TextStyle(color: AppColors.greyColor),
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          prefixIcon: Icon(Icons.email_outlined),
+                          prefixIcon: Icon(
+                            Icons.email_outlined,
+                            color: AppColors.greyColor,
+                            size: 28,
+                          ),
                           hintText: 'Email Address',
+                          hintStyle: TextStyle(
+                              fontSize: 20, color: AppColors.greyColor),
                         ),
                       ),
+                      SizedBox(
+                        height: 20,
+                      ),
                       TextFormField(
+                        style: TextStyle(color: AppColors.greyColor),
                         obscureText: isSecure, // flase--true
                         decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Icon(
+                              Icons.lock_outlined,
+                              color: AppColors.greyColor,
+                              size: 28,
+                            ),
                             hintText: 'Enter password',
+                            hintStyle: TextStyle(
+                                fontSize: 20, color: AppColors.greyColor),
                             suffixIcon: IconButton(
                                 onPressed: () {
                                   if (isSecure == true) {
@@ -98,19 +120,48 @@ class _StackScreen2State extends State<StackScreen2> {
                                   }
                                   setState(() {});
                                 },
-                                icon: Icon(isSecure == true
-                                    ? Icons.remove_red_eye
-                                    : Icons.visibility_off))),
+                                icon: Icon(
+                                  isSecure == true
+                                      ? Icons.remove_red_eye
+                                      : Icons.visibility_off,
+                                  color: AppColors.greyColor,
+                                ))),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.toggle_off_outlined,
+                            size: 25,
+                            color: AppColors.greyColor,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          NormalText(
+                            text: 'Remember me',
+                            textColor: Colors.grey,
+                            fontSize: 20,
+                          ),
+                          Spacer(),
+                          NormalText(
+                            text: 'Forgot Password',
+                            textColor: AppColors.blueColor,
+                            fontSize: 20,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
                       ),
                       GreenButton(
                         text: 'Login',
                         onTap: () {},
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 25,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -118,6 +169,7 @@ class _StackScreen2State extends State<StackScreen2> {
                           NormalText(
                             text: 'Dont have an account ?  ',
                             fontWeight: FontWeight.w400,
+                            fontSize: 19,
                           ),
                           SizedBox(
                             width: 2,
@@ -125,7 +177,7 @@ class _StackScreen2State extends State<StackScreen2> {
                           BoldText(
                             text: 'Sign up',
                             fontWeight: FontWeight.w400,
-                            fontSize: 18,
+                            fontSize: 20,
                           ),
                         ],
                       )
