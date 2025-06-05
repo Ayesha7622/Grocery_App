@@ -27,6 +27,8 @@ class BoldText extends StatelessWidget {
     return Text(text,
         textAlign: textalign,
         style: GoogleFonts.poppins(
-            fontSize: 25, fontWeight: fontWeight, color: AppColors.blackColor));
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+            color: AppColors.blackColor));
   }
 }

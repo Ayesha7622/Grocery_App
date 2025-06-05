@@ -12,7 +12,7 @@ class GreenButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 18),
+        // margin: EdgeInsets.symmetric(horizontal: 18),
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
