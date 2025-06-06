@@ -11,50 +11,84 @@ class SpalshScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(children: [
-      Padding(
-        padding: const EdgeInsets.only(left: 5),
-        child: Image.asset(
-          AppImages.element5Image,
-          fit: BoxFit.cover,
-        ),
-      ),
-      Container(
-        decoration: BoxDecoration(
-          //color: AppColors.whiteColor,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-        ),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 620,
+      body: Stack(
+        children: [
+          Column(children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 5),
+              child: Image.asset(
+                AppImages.element5Image,
+                fit: BoxFit.cover,
+              ),
             ),
-            BoldText(
-              text: 'Buy Premium\nQuality Fruits',
-              fontWeight: FontWeight.w700,
-              fontSize: 30,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            NormalText(
-              textColor: AppColors.greyColor,
-              text:
-                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy',
-              fontSize: 20,
-            ),
-            Spacer(),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: GreenButton(text: 'Get Started', onTap: () {}),
-            ),
-            SizedBox(
-              height: 20,
+              child: Image.asset(
+                AppImages.vectorImage,
+                fit: BoxFit.cover,
+              ),
             )
-          ],
-        ),
+          ]),
+        ],
       ),
-    ]));
+      // Padding(
+      //   padding: const EdgeInsets.only(left: 5),
+      //   child: Image.asset(
+      //     AppImages.element5Image,
+      //     fit: BoxFit.cover,
+      //   ),
+      // ),
+      // Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: Image.asset(
+      //     AppImages.vectorImage,
+      //     fit: BoxFit.cover,
+      //   ),
+      // )
+
+      // Column(
+      //   mainAxisAlignment: MainAxisAlignment.end,
+      //   children: [
+      //     Container(
+      //       decoration: BoxDecoration(
+      //         color: AppColors.whiteColor,
+      //         borderRadius: BorderRadius.only(
+      //             topLeft: Radius.circular(90), topRight: Radius.circular(90)),
+      //       ),
+      //       child: Column(
+      //         children: [
+      //           SizedBox(
+      //             height: 150,
+      //           ),
+      //           BoldText(
+      //             text: 'Buy Premium\nQuality Fruits',
+      //             fontWeight: FontWeight.w700,
+      //             fontSize: 30,
+      //           ),
+      //           SizedBox(
+      //             height: 10,
+      //           ),
+      //           NormalText(
+      //             textColor: AppColors.greyColor,
+      //             text:
+      //                 'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy',
+      //             fontSize: 20,
+      //           ),
+      //           SizedBox(
+      //             height: 30,
+      //           ),
+      //           Padding(
+      //             padding: const EdgeInsets.all(8.0),
+      //             child: GreenButton(text: 'Get Started', onTap: () {}),
+      //           ),
+      //           SizedBox(
+      //             height: 20,
+      //           )
+      //         ],
+      //       ),
+      //     ),
+      //   ],
+      // ),
+    );
   }
 }
