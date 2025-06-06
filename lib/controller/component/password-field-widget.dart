@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
 class PasswordFieldWidget extends StatefulWidget {
-  const PasswordFieldWidget({super.key});
+  final String hintText;
+  final IconData prefixIcon;
+  final TextEditingController controller;
+  final TextInputType textInput;
+  const PasswordFieldWidget(
+      {super.key,
+      required this.controller,
+      this.textInput = TextInputType.none,
+      required this.hintText,
+      required this.prefixIcon});
 
   @override
   State<PasswordFieldWidget> createState() => _PasswordFieldWidgetState();
@@ -15,16 +24,18 @@ class _PasswordFieldWidgetState extends State<PasswordFieldWidget> {
   Widget build(BuildContext context) {
     return Container(
       child: TextFormField(
+        keyboardType: widget.textInput,
+        controller: widget.controller,
         style: TextStyle(color: AppColors.white2Color),
         obscureText: isSecure, // flase--true
         decoration: InputDecoration(
             border: InputBorder.none,
             prefixIcon: Icon(
-              Icons.lock_outlined,
+              widget.prefixIcon,
               color: AppColors.greyColor,
               size: 28,
             ),
-            hintText: 'Enter password',
+            hintText: widget.hintText,
             hintStyle: TextStyle(fontSize: 20, color: AppColors.greyColor),
             suffixIcon: IconButton(
                 onPressed: () {

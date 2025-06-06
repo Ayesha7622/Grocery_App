@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Green_button_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
+import 'package:newgroceryapp/controller/component/password-field-widget.dart';
+import 'package:newgroceryapp/controller/component/text-form-field-widget.dart';
 import 'package:newgroceryapp/controller/component/white_button.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
@@ -15,6 +17,7 @@ class StackScreen3 extends StatefulWidget {
 }
 
 class _StackScreen3State extends State<StackScreen3> {
+  TextEditingController nameController = TextEditingController();
   bool isSecure = false;
   @override
   Widget build(BuildContext context) {
@@ -97,53 +100,64 @@ class _StackScreen3State extends State<StackScreen3> {
                       SizedBox(
                         height: 20,
                       ),
-                      TextFormField(
-                        style: TextStyle(color: AppColors.greyColor),
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: Icon(
-                            Icons.phone_outlined,
-                            color: AppColors.greyColor,
-                            size: 28,
-                          ),
-                          hintText: 'Phone number',
-                          hintStyle: TextStyle(
-                              fontSize: 20, color: AppColors.greyColor),
-                        ),
+                      TextFieldWidget(
+                        controller: nameController,
+                        hintText: 'Phonr Number',
+                        prefixIcon: Icons.phone,
+                        textInput: TextInputType.number,
                       ),
+                      // TextFormField(
+                      //   style: TextStyle(color: AppColors.greyColor),
+                      //   decoration: InputDecoration(
+                      //     border: InputBorder.none,
+                      //     prefixIcon: Icon(
+                      //       Icons.phone_outlined,
+                      //       color: AppColors.greyColor,
+                      //       size: 28,
+                      //     ),
+                      //     hintText: 'Phone number',
+                      //     hintStyle: TextStyle(
+                      //         fontSize: 20, color: AppColors.greyColor),
+                      //   ),
+                      // ),
+
                       SizedBox(
                         height: 20,
                       ),
-                      TextFormField(
-                        style: TextStyle(color: AppColors.white2Color),
-                        obscureText: isSecure, // flase--true
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            prefixIcon: Icon(
-                              Icons.lock_outlined,
-                              color: AppColors.greyColor,
-                              size: 28,
-                            ),
-                            hintText: 'Enter password',
-                            hintStyle: TextStyle(
-                                fontSize: 20, color: AppColors.greyColor),
-                            suffixIcon: IconButton(
-                                onPressed: () {
-                                  if (isSecure == true) {
-                                    //  bool secure = false;
-                                    isSecure = false;
-                                  } else {
-                                    isSecure = true;
-                                  }
-                                  setState(() {});
-                                },
-                                icon: Icon(
-                                  isSecure == true
-                                      ? Icons.remove_red_eye
-                                      : Icons.visibility_off,
-                                  color: AppColors.greyColor,
-                                ))),
-                      ),
+                      //  PasswordFieldWidget(controller: controller,
+                      //   hintText: 'Enter password',
+                      //   prefixIcon: Icons.lock),
+                      // TextFormField(
+                      //   style: TextStyle(color: AppColors.white2Color),
+                      //   obscureText: isSecure, // flase--true
+                      //   decoration: InputDecoration(
+                      //       border: InputBorder.none,
+                      //       prefixIcon: Icon(
+                      //         Icons.lock_outlined,
+                      //         color: AppColors.greyColor,
+                      //         size: 28,
+                      //       ),
+                      //       hintText: 'Enter password',
+                      //       hintStyle: TextStyle(
+                      //           fontSize: 20, color: AppColors.greyColor),
+                      //       suffixIcon: IconButton(
+                      //           onPressed: () {
+                      //             if (isSecure == true) {
+                      //               //  bool secure = false;
+                      //               isSecure = false;
+                      //             } else {
+                      //               isSecure = true;
+                      //             }
+                      //             setState(() {});
+                      //           },
+                      //           icon: Icon(
+                      //             isSecure == true
+                      //                 ? Icons.remove_red_eye
+                      //                 : Icons.visibility_off,
+                      //             color: AppColors.greyColor,
+                      //           ))),
+                      // ),
+
                       SizedBox(
                         height: 20,
                       ),

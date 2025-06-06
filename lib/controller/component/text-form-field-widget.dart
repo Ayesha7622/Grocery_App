@@ -5,9 +5,11 @@ class TextFieldWidget extends StatelessWidget {
   final String hintText;
   final IconData prefixIcon;
   final TextEditingController controller;
+  final TextInputType textInput;
   const TextFieldWidget(
       {super.key,
       required this.controller,
+      this.textInput = TextInputType.name,
       required this.hintText,
       required this.prefixIcon});
 
@@ -17,6 +19,7 @@ class TextFieldWidget extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(3)),
       child: TextFormField(
+        keyboardType: textInput,
         controller: controller,
         style: TextStyle(color: AppColors.greyColor),
         decoration: InputDecoration(

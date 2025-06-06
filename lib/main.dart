@@ -40,13 +40,14 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: //BoradingWidgetScreen()
-            //SpalshScreen3()
-            //SplashScreen2Class()
-            //Splash_Screen_Project(),
-            //PasswordClassNew()
-            //StackScreen()
-            //StackScreen2()
-            StackScreen3());
+            SpalshScreen3()
+        //SplashScreen2Class()
+        //Splash_Screen_Project(),
+        //PasswordClassNew()
+        //StackScreen()
+        //StackScreen2()
+        //StackScreen3()
+        );
   }
 }
 

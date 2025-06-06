@@ -12,29 +12,48 @@ class SpalshScreen3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(children: [
-      Image.asset(
-        AppImages.element5Image,
-        fit: BoxFit.cover,
+      Padding(
+        padding: const EdgeInsets.only(left: 5),
+        child: Image.asset(
+          AppImages.element5Image,
+          fit: BoxFit.cover,
+        ),
       ),
-      Column(
-        children: [
-          SizedBox(
-            height: 220,
-          ),
-          BoldText(text: 'Buy Premium\nQuality Fruits'),
-          SizedBox(
-            height: 10,
-          ),
-          NormalText(
-              textColor: AppColors.blackColor,
+      Container(
+        decoration: BoxDecoration(
+          //color: AppColors.whiteColor,
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 620,
+            ),
+            BoldText(
+              text: 'Buy Premium\nQuality Fruits',
+              fontWeight: FontWeight.w700,
+              fontSize: 30,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            NormalText(
+              textColor: AppColors.greyColor,
               text:
-                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-          Spacer(),
-          GreenButton(text: 'Get Started', onTap: () {}),
-          SizedBox(
-            height: 20,
-          )
-        ],
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy',
+              fontSize: 20,
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GreenButton(text: 'Get Started', onTap: () {}),
+            ),
+            SizedBox(
+              height: 20,
+            )
+          ],
+        ),
       ),
     ]));
   }
