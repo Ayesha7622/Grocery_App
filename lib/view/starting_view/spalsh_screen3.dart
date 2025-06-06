@@ -11,55 +11,31 @@ class SpalshScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+        body: Stack(children: [
+      Image.asset(
+        AppImages.element5Image,
+        fit: BoxFit.cover,
+      ),
+      Column(
         children: [
-          Expanded(
-              flex: 50,
-              child: Container(
-                  height: double.infinity,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.only(
-                    //     topLeft: Radius.circular(40),
-                    //     topRight: Radius.circular(40)),
-                    image: DecorationImage(
-                      image: AssetImage(AppImages.element5Image),
-                    ),
-                  ))),
-          Expanded(
-            flex: 50,
-            child: Container(
-              height: double.infinity,
-              width: double.infinity,
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.only(
-              //       topLeft: Radius.circular(20),
-              //       topRight: Radius.circular(20)),
-              // ),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 220,
-                  ),
-                  BoldText(text: 'Buy Premium\nQuality Fruits'),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  NormalText(
-                      textColor: AppColors.blackColor,
-                      text:
-                          'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
-                  Spacer(),
-                  GreenButton(text: 'Get Started', onTap: () {}),
-                  SizedBox(
-                    height: 20,
-                  )
-                ],
-              ),
-            ),
+          SizedBox(
+            height: 220,
           ),
+          BoldText(text: 'Buy Premium\nQuality Fruits'),
+          SizedBox(
+            height: 10,
+          ),
+          NormalText(
+              textColor: AppColors.blackColor,
+              text:
+                  'Lorem ipsum dolor sit amet, consetetur\nsadipscing elitr, sed diam nonumy'),
+          Spacer(),
+          GreenButton(text: 'Get Started', onTap: () {}),
+          SizedBox(
+            height: 20,
+          )
         ],
       ),
-    );
+    ]));
   }
 }
