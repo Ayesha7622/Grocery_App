@@ -16,4 +16,10 @@ class AppColors {
   static const Color anar = Color(0xffFFE3E2);
   static const Color roccoli = Color(0xffD2FFD0);
   static const Color green = Color(0xff6CC51D);
+  static const Color grey3 = Color(0xffE6F2EA);
+  static const Color lightred = Color(0xffFFE9E5);
+  static const Color cream = Color(0xffFFF6E3);
+  static const Color lightpurple = Color(0xffF3EFFA);
+  static const Color lightblue = Color(0xffDCF4F5);
+  static const Color lightpink = Color(0xffFFE8F2);
 }

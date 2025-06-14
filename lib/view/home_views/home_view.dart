@@ -54,7 +54,7 @@ class HomeScreenClass extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Container(
-                height: 400,
+                height: 300,
                 width: double.infinity,
                 child: Stack(
                   children: [
@@ -62,35 +62,85 @@ class HomeScreenClass extends StatelessWidget {
                       AppImages.ellaImage,
                       fit: BoxFit.cover,
                     ),
-                    SizedBox(
-                      height: 100,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: BoldText(
-                            text: '20% off on \nyour first purchase',
-                            textColor: AppColors.blackColor,
-                            fontSize: 20,
-                          ),
+                    Column(children: [
+                      SizedBox(
+                        height: 120,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: BoldText(
+                          text: '20% off on your\n first purchase',
+                          textalign: TextAlign.left,
+                          textColor: AppColors.blackColor,
+                          fontSize: 20,
                         ),
-                        Spacer(),
-                        Row(
-                          children: [
-                            Container(
-                              height: 40,
-                              width: 100,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 30,
+                              width: 70,
                               decoration: BoxDecoration(
                                   color: AppColors.green,
                                   borderRadius: BorderRadius.circular(25)),
-                            )
-                          ],
-                        )
-                      ],
-                    )
+                            ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          CircleAvatar(
+                            radius: 10,
+                            backgroundColor: AppColors.whiteColor,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          CircleAvatar(
+                            radius: 10,
+                            backgroundColor: AppColors.whiteColor,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          CircleAvatar(
+                            radius: 10,
+                            backgroundColor: AppColors.whiteColor,
+                          ),
+                        ],
+                      ),
+                    ])
                   ],
                 )),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: BoldText(
+                  text: 'Categories',
+                  fontSize: 23,
+                ),
+              ),
+              Spacer(),
+              Icon(
+                Icons.chevron_right,
+                color: AppColors.greyColor,
+                size: 35,
+              )
+            ],
+          ),
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundColor: AppColors.grey3,
+              )
+            ],
           )
         ],
       ),
