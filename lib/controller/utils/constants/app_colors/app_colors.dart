@@ -8,5 +8,11 @@ class AppColors {
   static Color blackColor = Colors.black;
   static Color white2Color = const Color.fromARGB(255, 232, 227, 227);
   static const Color blueColor = Colors.blue;
-  static const Color grey2 = Color(0xfff4f5f9);
+  static const Color grey2 = Color(0xffF4F5F9);
+  static const Color peach = Color(0xffFFCEC1);
+  static const Color avacoda = Color(0xfff4f5f9);
+  static const Color pineapple = Color(0xffFFE6C2);
+  static const Color grapes = Color(0xffFEE1ED);
+  static const Color anar = Color(0xffFFE3E2);
+  static const Color roccoli = Color(0xffD2FFD0);
 }
