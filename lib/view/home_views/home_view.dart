@@ -12,29 +12,42 @@ class HomeScreenClass extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            height: 100,
-            width: 600,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: AppColors.grey2,
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  color: AppColors.greyColor,
-                ),
-                NormalText(
-                  text: 'Search keywords',
-                  textColor: AppColors.greyColor,
-                ),
-                Spacer(),
-                Icon(
-                  Icons.tune,
-                  color: AppColors.greyColor,
-                )
-              ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 80,
+              width: 2600,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppColors.grey2,
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.search,
+                      color: AppColors.greyColor,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: NormalText(
+                      text: 'Search keywords',
+                      textColor: AppColors.greyColor,
+                      fontSize: 20,
+                    ),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.tune,
+                      color: AppColors.greyColor,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           Container(
