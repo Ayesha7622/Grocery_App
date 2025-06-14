@@ -10,4 +10,5 @@ class AppImages {
   static String portraitImage = 'assets/appImages/portrait-female.png';
   static String womanImage = 'assets/appImages/woman-with1.png';
   static String vectorImage = 'assets/appImages/Vector 1.png';
+  static String ellaImage = 'assets/appImages/ella-olsson.png';
 }
