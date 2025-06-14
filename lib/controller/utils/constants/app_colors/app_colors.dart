@@ -15,4 +15,5 @@ class AppColors {
   static const Color grapes = Color(0xffFEE1ED);
   static const Color anar = Color(0xffFFE3E2);
   static const Color roccoli = Color(0xffD2FFD0);
+  static const Color green = Color(0xff6CC51D);
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
@@ -31,7 +32,7 @@ class HomeScreenClass extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: NormalText(
                       text: 'Search keywords',
                       textColor: AppColors.greyColor,
@@ -50,12 +51,47 @@ class HomeScreenClass extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-              height: double.infinity,
-              width: double.infinity,
-              child: Stack(
-                children: [Image.asset(AppImages.ellaImage)],
-              ))
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Container(
+                height: 400,
+                width: double.infinity,
+                child: Stack(
+                  children: [
+                    Image.asset(
+                      AppImages.ellaImage,
+                      fit: BoxFit.cover,
+                    ),
+                    SizedBox(
+                      height: 100,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: BoldText(
+                            text: '20% off on \nyour first purchase',
+                            textColor: AppColors.blackColor,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            Container(
+                              height: 40,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  color: AppColors.green,
+                                  borderRadius: BorderRadius.circular(25)),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                )),
+          )
         ],
       ),
     );
