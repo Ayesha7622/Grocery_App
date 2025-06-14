@@ -18,12 +18,17 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
         width: 600,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: AppColors.greyColor,
+          color: AppColors.grey2,
         ),
         child: Row(
           children: [
-            Icon(Icons.search),
-            Text('Search keywords'),
+            Icon(
+              Icons.search,
+              color: AppColors.greyColor,
+            ),
+            Text(
+              'Search keywords',
+            ),
             Spacer(),
             Icon(Icons.tune)
           ],
