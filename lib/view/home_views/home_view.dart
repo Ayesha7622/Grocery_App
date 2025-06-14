@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
@@ -26,11 +27,15 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
               Icons.search,
               color: AppColors.greyColor,
             ),
-            Text(
-              'Search keywords',
+            NormalText(
+              text: 'Search keywords',
+              textColor: AppColors.greyColor,
             ),
             Spacer(),
-            Icon(Icons.tune)
+            Icon(
+              Icons.tune,
+              color: AppColors.greyColor,
+            )
           ],
         ),
       ),
