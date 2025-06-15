@@ -147,14 +147,14 @@ class HomeScreenClass extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundColor: AppColors.grey3,
+                  backgroundColor: AppColors.lightred,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundColor: AppColors.grey3,
+                  backgroundColor: AppColors.cream,
                 ),
               ),
               Padding(
