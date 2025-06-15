@@ -15,6 +15,23 @@ class HomeScreenClass extends StatelessWidget {
     'Pomegranate',
     'Fresh B roccoli',
   ];
+  List<String> images = [
+    'assets/images/peach-24 1.png',
+    'assets.images/aocado-2 1.png',
+    'assets/images/pineapple-pieces.png',
+    'assets/images/grapes-31.png',
+    'assets/images/pomegranate-11.png',
+    'assets/images/green-fresh-broccoli.png'
+  ];
+  List<String> price = [
+    '${8.00}',
+    '${7.00}',
+    '${9.90}',
+    '${7.05}',
+    '${2.09}',
+    '${3.00}'
+  ];
+  List<String> weight = [''];
 
   @override
   Widget build(BuildContext context) {
