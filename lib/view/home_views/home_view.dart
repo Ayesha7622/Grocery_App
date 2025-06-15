@@ -136,10 +136,48 @@ class HomeScreenClass extends StatelessWidget {
           ),
           Row(
             children: [
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: AppColors.grey3,
-              )
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.grey3,
+                ),
+              ),
             ],
           )
         ],
