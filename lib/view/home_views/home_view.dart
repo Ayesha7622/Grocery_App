@@ -6,7 +6,15 @@ import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/a
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
 class HomeScreenClass extends StatelessWidget {
-  const HomeScreenClass({super.key});
+  HomeScreenClass({super.key});
+  List<String> name = [
+    'Fresh Peach',
+    'Avacoda',
+    'Pineapple',
+    'Black Grapes',
+    'Pomegranate',
+    'Fresh B roccoli',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -248,7 +256,27 @@ class HomeScreenClass extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: BoldText(
+                  text: 'Featured Products',
+                  fontSize: 23,
+                ),
+              ),
+              Spacer(),
+              Icon(
+                Icons.chevron_right,
+                color: AppColors.greyColor,
+                size: 35,
+              )
+            ],
+          ),
         ],
       ),
     );
