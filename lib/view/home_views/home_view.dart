@@ -134,51 +134,120 @@ class HomeScreenClass extends StatelessWidget {
               )
             ],
           ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.grey3,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.grey3,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Vegetables',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.lightred,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.lightred,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Fruits',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.cream,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.cream,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Beverages',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.grey3,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.lightpurple,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Grocery',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.grey3,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.lightblue,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Edible oil',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: AppColors.grey3,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundColor: AppColors.lightpink,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      NormalText(
+                        text: 'Household',
+                        fontSize: 17,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
