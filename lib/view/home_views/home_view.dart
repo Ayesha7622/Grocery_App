@@ -22,9 +22,9 @@ class ChatsModel {
 
 class HomeScreenClass extends StatelessWidget {
   HomeScreenClass({super.key});
-  List<ChatsModel> chats = [
+  List<ChatsModel> grocery = [
     ChatsModel(
-        colr:AppColors.peach,
+        colr: AppColors.peach,
         name: 'reshPeach',
         images: 'assets/images/peach-24 1.png',
         price: '${8.00}',
@@ -370,8 +370,29 @@ class HomeScreenClass extends StatelessWidget {
                   )
                 ],
               ),
-              ListView.builder(itemBuilder: (context,i),
-              itemCount: ,)
+              ListView.builder(
+                  itemCount: grocery.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 234,
+                      width: 181,
+                      color: AppColors.whiteColor,
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 20,
+                            backgroundColor: grocery[index].colr,
+                            backgroundImage: AssetImage(
+                              grocery[index].images.toString(),
+                            ),
+                          ),
+                          Text(grocery[index].price.toString()),
+                          Text(grocery[index].name.toString()),
+                          Text(grocery[index].weight.toString()),
+                        ],
+                      ),
+                    );
+                  })
 
               // Padding(
               //   padding: const EdgeInsets.all(8.0),
