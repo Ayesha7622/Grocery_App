@@ -370,7 +370,7 @@ class HomeScreenClass extends StatelessWidget {
         child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8),
-            itemCount: grocery.length,
+            itemCount: 8,
             itemBuilder: (context, index) {
               return Container(
                 height: 234,
