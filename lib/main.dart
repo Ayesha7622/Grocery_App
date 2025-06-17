@@ -3,6 +3,7 @@ import 'package:newgroceryapp/view/auth_views/login_stack.dart';
 import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: //BoradingWidgetScreen()
+        home: //ProductDetailsView(image: image, name: name, price: price)
+            //BoradingWidgetScreen()
             //SpalshScreen3()
             //SplashScreen2Class()
             //Splash_Screen_Project(),

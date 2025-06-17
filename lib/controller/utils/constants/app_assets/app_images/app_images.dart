@@ -17,4 +17,5 @@ class AppImages {
   static String grapesImage = 'assets/appImages/grapes-31.png';
   static String pomeImage = 'assets/appImages/pomegranate-11.png';
   static String roccoliImage = 'assets/appImages/green-fresh-broccoli.png';
+  static String lemon = 'assets/appImages/lime.png';
 }

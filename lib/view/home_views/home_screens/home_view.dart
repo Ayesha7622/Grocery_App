@@ -233,11 +233,13 @@ class HomeScreenClass extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Icon(
-              Icons.chevron_right,
-              color: AppColors.greyColor,
-              size: 35,
-            )
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.chevron_right,
+                  color: AppColors.greyColor,
+                  size: 35,
+                )),
           ],
         ),
         SingleChildScrollView(
@@ -251,7 +253,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.grey3,
-                      backgroundImage: AssetImage(AppIcons.group),
+                      backgroundImage: AssetImage(AppIcons.leaf),
                       //backgroundImage: AssetImage(grocery[index].icons.toString())
                     ),
                     SizedBox(
@@ -271,7 +273,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightred,
-                      backgroundImage: AssetImage(AppIcons.group1),
+                      backgroundImage: AssetImage(AppIcons.apple),
                     ),
                     SizedBox(
                       height: 10,
@@ -290,7 +292,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.cream,
-                      backgroundImage: AssetImage(AppIcons.beverage),
+                      backgroundImage: AssetImage(AppIcons.yellow),
                     ),
                     SizedBox(
                       height: 10,
@@ -309,7 +311,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightpurple,
-                      backgroundImage: AssetImage(AppIcons.group2),
+                      backgroundImage: AssetImage(AppIcons.purple),
                     ),
                     SizedBox(
                       height: 10,
@@ -328,7 +330,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightblue,
-                      backgroundImage: AssetImage(AppIcons.group3),
+                      backgroundImage: AssetImage(AppIcons.blue),
                     ),
                     SizedBox(
                       height: 10,
@@ -399,6 +401,7 @@ class HomeScreenClass extends StatelessWidget {
                             builder: (context) => ProductDetailsView(
                                 image: grocery[index].images.toString(),
                                 name: grocery[index].name.toString(),
+                                weight: grocery[index].weight.toString(),
                                 price: grocery[index].price.toString())));
                   },
                   child: Container(

@@ -9,6 +9,7 @@ class AppColors {
   static Color white2Color = const Color.fromARGB(255, 232, 227, 227);
   static const Color blueColor = Colors.blue;
   static const Color redColor = Colors.redAccent;
+  static const Color yellow = Colors.yellow;
   static const Color grey2 = Color(0xffF4F5F9);
   static const Color peach = Color(0xffFFCEC1);
   static const Color avacoda = Color(0xfff4f5f9);
@@ -23,6 +24,7 @@ class AppColors {
   static const Color lightpurple = Color(0xffF3EFFA);
   static const Color lightblue = Color(0xffDCF4F5);
   static const Color lightpink = Color(0xffFFE8F2);
+
   //gradient
   static const Color yite1 = Color(0xffFFFFFF);
   static const Color yite2 = Color(0xffFFFFFF);
