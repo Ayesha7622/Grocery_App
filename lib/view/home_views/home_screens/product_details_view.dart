@@ -88,11 +88,14 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                   )
                 ],
               ),
-              NormalText(
-                text:
-                    'Organic Mountain works as a seller for many organic growers\n of organic lemons. Organic lemons are easy to spot in your\n produce aisle. They are just like regular lemons, but they will\n usually have a few more scars on the outside of the lemon \nskin. Organic lemons are considered to be the worlds finest\n lemon for juicing',
-                textColor: AppColors.greyColor,
-                textAlign: TextAlign.left,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: NormalText(
+                  text:
+                      'Organic Mountain works as a seller for many organic growers\n of organic lemons. Organic lemons are easy to spot in your\n produce aisle. They are just like regular lemons, but they will\n usually have a few more scars on the outside of the lemon \nskin. Organic lemons are considered to be the worlds finest\n lemon for juicing',
+                  textColor: AppColors.greyColor,
+                  textAlign: TextAlign.left,
+                ),
               ),
               Container(
                 height: 50,
