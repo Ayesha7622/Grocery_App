@@ -4,11 +4,13 @@ import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 
 class ChatsModel {
   Color? colr;
   String? name;
   String? images;
+  String? icons;
   String? price;
   String? weight;
 
@@ -16,6 +18,7 @@ class ChatsModel {
       {required this.colr,
       required this.name,
       required this.images,
+      required this.icons,
       required this.price,
       required this.weight});
 }
@@ -25,36 +28,42 @@ class HomeScreenClass extends StatelessWidget {
   List<ChatsModel> grocery = [
     ChatsModel(
         colr: AppColors.peach,
+        icons: AppIcons.group,
         name: 'reshPeach',
-        images: 'assets/images/peach-24 1.png',
+        images: AppImages.base, //'assets/appImages/peach-24 1.png',
         price: '${8.00}',
         weight: 'dozen'),
     ChatsModel(
         colr: AppColors.avacoda,
+        icons: AppIcons.group1,
         name: 'Avacoda',
         images: 'assets.images/aocado-2 1.png',
         price: '${7.00}',
         weight: '2.0 lbs'),
     ChatsModel(
         colr: AppColors.pineapple,
+        icons: AppIcons.beverage,
         name: 'Pineapple',
         images: 'assets/images/pineapple-pieces.png',
         price: '${9.90}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.grapes,
+        icons: AppIcons.group2,
         name: 'Black Grapes',
         images: 'assets/images/grapes-31.png',
         price: '${7.05}',
         weight: '1.5 lbs'),
     ChatsModel(
         colr: AppColors.anar,
+        icons: AppIcons.group3,
         name: 'Pomegranate',
         images: 'assets/images/pomegranate-11.png',
         price: '${2.09}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.roccoli,
+        icons: AppIcons.vacuum,
         name: 'Fresh B roccoli',
         images: 'assets/images/green-fresh-broccoli.png',
         price: '${3.00}',
@@ -242,6 +251,8 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.grey3,
+                      backgroundImage: AssetImage(AppIcons.group1),
+                      //backgroundImage: AssetImage(grocery[index].icons.toString())
                     ),
                     SizedBox(
                       height: 10,
@@ -371,46 +382,59 @@ class HomeScreenClass extends StatelessWidget {
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8),
-              itemCount: 8,
+              itemCount: grocery.length,
               itemBuilder: (context, index) {
-                return Container(
-                  height: 234,
-                  width: 181,
-                  color: AppColors.whiteColor,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        width: 400,
-                      ),
-                      Icon(Icons.favorite),
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: grocery[index].colr,
-                        backgroundImage: AssetImage(
-                          grocery[index].images.toString(),
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProductDetailsView(
+                                image: grocery[index].images.toString(),
+                                name: grocery[index].name.toString(),
+                                price: grocery[index].price.toString())));
+                  },
+                  child: Container(
+                    height: 234,
+                    width: 181,
+                    color: AppColors.whiteColor,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Icon(Icons.favorite),
+                          ],
                         ),
-                      ),
-                      NormalText(
-                        text: grocery[index].price.toString(),
-                        textColor: AppColors.green,
-                        fontSize: 12,
-                      ),
-                      BoldText(
-                        text: grocery[index].name.toString(),
-                        fontSize: 15,
-                      ),
-                      NormalText(
-                        text: grocery[index].weight.toString(),
-                        textColor: AppColors.greyColor,
-                        fontSize: 12,
-                      ),
-                      Divider(),
-                      NormalText(
-                        text: 'Add to cart',
-                        fontSize: 12,
-                        textColor: AppColors.blackColor,
-                      )
-                    ],
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundColor: grocery[index].colr,
+                          backgroundImage: AssetImage(
+                            grocery[index].images.toString(),
+                          ),
+                        ),
+                        NormalText(
+                          text: grocery[index].price.toString(),
+                          textColor: AppColors.green,
+                          fontSize: 12,
+                        ),
+                        BoldText(
+                          text: grocery[index].name.toString(),
+                          fontSize: 15,
+                        ),
+                        NormalText(
+                          text: grocery[index].weight.toString(),
+                          textColor: AppColors.greyColor,
+                          fontSize: 12,
+                        ),
+                        Divider(),
+                        NormalText(
+                          text: 'Add to cart',
+                          fontSize: 12,
+                          textColor: AppColors.blackColor,
+                        )
+                      ],
+                    ),
                   ),
                 );
               }),

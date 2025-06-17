@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newgroceryapp/view/auth_views/login_stack.dart';
 import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
-import 'package:newgroceryapp/view/home_views/home_view.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';

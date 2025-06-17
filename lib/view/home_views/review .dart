@@ -9,7 +9,12 @@ class ReviewHomeClass extends StatelessWidget {
       body: Column(
         children: [
           Row(
-            children: [Icon(Icons.arrow_back), Text('Write Reviews')],
+            children: [
+              Icon(Icons.arrow_back),
+              Text(
+                'Write Reviews',
+              )
+            ],
           )
         ],
       ),
