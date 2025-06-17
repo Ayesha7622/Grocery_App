@@ -379,6 +379,9 @@ class HomeScreenClass extends StatelessWidget {
                   color: AppColors.whiteColor,
                   child: Column(
                     children: [
+                      SizedBox(
+                        width: 400,
+                      ),
                       Icon(Icons.favorite),
                       CircleAvatar(
                         radius: 40,
