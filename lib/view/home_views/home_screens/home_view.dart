@@ -10,7 +10,7 @@ class ChatsModel {
   Color? colr;
   String? name;
   String? images;
-  String? icons;
+  //String? icons;
   String? price;
   String? weight;
 
@@ -18,7 +18,7 @@ class ChatsModel {
       {required this.colr,
       required this.name,
       required this.images,
-      required this.icons,
+      //required this.icons,
       required this.price,
       required this.weight});
 }
@@ -28,42 +28,42 @@ class HomeScreenClass extends StatelessWidget {
   List<ChatsModel> grocery = [
     ChatsModel(
         colr: AppColors.peach,
-        icons: AppIcons.group,
+        //icons: AppIcons.group,
         name: 'reshPeach',
         images: AppImages.base, //'assets/appImages/peach-24 1.png',
         price: '${8.00}',
         weight: 'dozen'),
     ChatsModel(
         colr: AppColors.avacoda,
-        icons: AppIcons.group1,
+        //icons: AppIcons.group1,
         name: 'Avacoda',
         images: 'assets.images/aocado-2 1.png',
         price: '${7.00}',
         weight: '2.0 lbs'),
     ChatsModel(
         colr: AppColors.pineapple,
-        icons: AppIcons.beverage,
+        //icons: AppIcons.beverage,
         name: 'Pineapple',
         images: 'assets/images/pineapple-pieces.png',
         price: '${9.90}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.grapes,
-        icons: AppIcons.group2,
+        //icons: AppIcons.group2,
         name: 'Black Grapes',
         images: 'assets/images/grapes-31.png',
         price: '${7.05}',
         weight: '1.5 lbs'),
     ChatsModel(
         colr: AppColors.anar,
-        icons: AppIcons.group3,
+        //icons: AppIcons.group3,
         name: 'Pomegranate',
         images: 'assets/images/pomegranate-11.png',
         price: '${2.09}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.roccoli,
-        icons: AppIcons.vacuum,
+        //icons: AppIcons.vacuum,
         name: 'Fresh B roccoli',
         images: 'assets/images/green-fresh-broccoli.png',
         price: '${3.00}',
