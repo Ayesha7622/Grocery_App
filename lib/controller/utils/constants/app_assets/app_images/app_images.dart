@@ -13,7 +13,7 @@ class AppImages {
   static String ellaImage = 'assets/appImages/ella-olsson.png';
   static String peachImage = 'assets/appImages/peach-24 1.png';
   static String avacodaImage = 'assets/appImages/aocado-2 1.png';
-  static String pineImage = 'assets/appImages/pineapple-pieces.png';
+  static String pineImage = 'assets/appImages/pineapple-pieces (1).png';
   static String grapesImage = 'assets/appImages/grapes-31.png';
   static String pomeImage = 'assets/appImages/pomegranate-11.png';
   static String roccoliImage = 'assets/appImages/green-fresh-broccoli.png';

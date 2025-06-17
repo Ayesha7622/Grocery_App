@@ -8,5 +8,5 @@ class AppIcons {
   static String group2 = 'assets/appIcons/Group 2.png';
   static String group = 'assets/appIcons/Group.png';
   static String vacuum = 'assets/appIcons/vacuum 1.png';
-  static String group3 = 'assets/appIcons/group 3.png';
+  static String group3 = 'assets/appIcons/Group 3.png';
 }

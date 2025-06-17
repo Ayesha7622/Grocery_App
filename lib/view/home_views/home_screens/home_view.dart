@@ -10,7 +10,7 @@ class ChatsModel {
   Color? colr;
   String? name;
   String? images;
-  //String? icons;
+  String? icons;
   String? price;
   String? weight;
 
@@ -30,42 +30,42 @@ class HomeScreenClass extends StatelessWidget {
         colr: AppColors.peach,
         //icons: AppIcons.group,
         name: 'reshPeach',
-        images: AppImages.base, //'assets/appImages/peach-24 1.png',
+        images: AppImages.peachImage, //'assets/appImages/peach-24 1.png',
         price: '${8.00}',
         weight: 'dozen'),
     ChatsModel(
         colr: AppColors.avacoda,
         //icons: AppIcons.group1,
         name: 'Avacoda',
-        images: 'assets.images/aocado-2 1.png',
+        images: AppImages.avacodaImage,
         price: '${7.00}',
         weight: '2.0 lbs'),
     ChatsModel(
         colr: AppColors.pineapple,
         //icons: AppIcons.beverage,
         name: 'Pineapple',
-        images: 'assets/images/pineapple-pieces.png',
+        images: AppImages.pineImage,
         price: '${9.90}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.grapes,
         //icons: AppIcons.group2,
         name: 'Black Grapes',
-        images: 'assets/images/grapes-31.png',
+        images: AppImages.grapesImage,
         price: '${7.05}',
         weight: '1.5 lbs'),
     ChatsModel(
         colr: AppColors.anar,
         //icons: AppIcons.group3,
         name: 'Pomegranate',
-        images: 'assets/images/pomegranate-11.png',
+        images: AppImages.pomeImage,
         price: '${2.09}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.roccoli,
         //icons: AppIcons.vacuum,
         name: 'Fresh B roccoli',
-        images: 'assets/images/green-fresh-broccoli.png',
+        images: AppImages.roccoliImage,
         price: '${3.00}',
         weight: '1 kg'),
 
@@ -251,7 +251,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.grey3,
-                      backgroundImage: AssetImage(AppIcons.group1),
+                      backgroundImage: AssetImage(AppIcons.group),
                       //backgroundImage: AssetImage(grocery[index].icons.toString())
                     ),
                     SizedBox(
@@ -271,6 +271,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightred,
+                      backgroundImage: AssetImage(AppIcons.group1),
                     ),
                     SizedBox(
                       height: 10,
@@ -289,6 +290,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.cream,
+                      backgroundImage: AssetImage(AppIcons.beverage),
                     ),
                     SizedBox(
                       height: 10,
@@ -307,6 +309,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightpurple,
+                      backgroundImage: AssetImage(AppIcons.group2),
                     ),
                     SizedBox(
                       height: 10,
@@ -325,6 +328,7 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightblue,
+                      backgroundImage: AssetImage(AppIcons.group3),
                     ),
                     SizedBox(
                       height: 10,
@@ -343,6 +347,9 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightpink,
+                      backgroundImage: AssetImage(
+                        AppIcons.vacuum,
+                      ),
                     ),
                     SizedBox(
                       height: 10,
@@ -395,7 +402,7 @@ class HomeScreenClass extends StatelessWidget {
                                 price: grocery[index].price.toString())));
                   },
                   child: Container(
-                    height: 234,
+                    height: 254,
                     width: 181,
                     color: AppColors.whiteColor,
                     child: Column(
@@ -403,7 +410,13 @@ class HomeScreenClass extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Icon(Icons.favorite),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.favorite,
+                                color: AppColors.redColor,
+                              ),
+                            ),
                           ],
                         ),
                         CircleAvatar(
@@ -416,16 +429,16 @@ class HomeScreenClass extends StatelessWidget {
                         NormalText(
                           text: grocery[index].price.toString(),
                           textColor: AppColors.green,
-                          fontSize: 12,
+                          fontSize: 15,
                         ),
                         BoldText(
                           text: grocery[index].name.toString(),
-                          fontSize: 15,
+                          fontSize: 18,
                         ),
                         NormalText(
                           text: grocery[index].weight.toString(),
                           textColor: AppColors.greyColor,
-                          fontSize: 12,
+                          fontSize: 13,
                         ),
                         Divider(),
                         NormalText(
