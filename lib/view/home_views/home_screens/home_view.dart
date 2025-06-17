@@ -253,7 +253,8 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.grey3,
-                      backgroundImage: AssetImage(AppIcons.leaf),
+                      //backgroundImage: AssetImage(AppIcons.leaf),
+                      child: Image(image: AssetImage(AppIcons.leaf)),
                       //backgroundImage: AssetImage(grocery[index].icons.toString())
                     ),
                     SizedBox(
@@ -292,7 +293,8 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.cream,
-                      backgroundImage: AssetImage(AppIcons.yellow),
+                      //backgroundImage: AssetImage(AppIcons.yellow),
+                      child: Image(image: AssetImage(AppIcons.yellow)),
                     ),
                     SizedBox(
                       height: 10,
@@ -311,7 +313,8 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightpurple,
-                      backgroundImage: AssetImage(AppIcons.purple),
+                      //backgroundImage: AssetImage(AppIcons.purple),
+                      child: Image(image: AssetImage(AppIcons.purple)),
                     ),
                     SizedBox(
                       height: 10,
@@ -330,7 +333,8 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightblue,
-                      backgroundImage: AssetImage(AppIcons.blue),
+                      //backgroundImage: AssetImage(AppIcons.blue),
+                      child: Image(image: AssetImage(AppIcons.blue)),
                     ),
                     SizedBox(
                       height: 10,
@@ -349,9 +353,11 @@ class HomeScreenClass extends StatelessWidget {
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: AppColors.lightpink,
-                      backgroundImage: AssetImage(
-                        AppIcons.vacuum,
-                      ),
+                      // backgroundImage: AssetImage(
+                      //   AppIcons.vacuum,
+
+                      // ),
+                      child: Image(image: AssetImage(AppIcons.vacuum)),
                     ),
                     SizedBox(
                       height: 10,
