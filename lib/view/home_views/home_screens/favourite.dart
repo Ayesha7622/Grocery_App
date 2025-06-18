@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
@@ -21,9 +22,15 @@ class ChatsModel {
       required this.weight});
 }
 
-class FavouriteScreen extends StatelessWidget {
-  int count = 0;
+class FavouriteScreen extends StatefulWidget {
   FavouriteScreen({super.key});
+
+  @override
+  State<FavouriteScreen> createState() => _FavouriteScreenState();
+}
+
+class _FavouriteScreenState extends State<FavouriteScreen> {
+  int count = 0;
 
   List<ChatsModel> grocery = [
     ChatsModel(
@@ -109,7 +116,7 @@ class FavouriteScreen extends StatelessWidget {
         ),
       ),
       SizedBox(
-          height: 500,
+          height: 600,
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1, mainAxisSpacing: 8, crossAxisSpacing: 8),
@@ -124,6 +131,7 @@ class FavouriteScreen extends StatelessWidget {
                   child: Container(
                     height: 100,
                     width: 380,
+                    decoration: BoxDecoration(color: AppColors.yite3),
                     child: Row(
                       children: [
                         CircleAvatar(
@@ -156,6 +164,7 @@ class FavouriteScreen extends StatelessWidget {
                                 onPressed: () {
                                   if (count > 1) {
                                     count++;
+                                    setState(() {});
                                   }
                                 },
                                 icon: Icon(
@@ -170,6 +179,7 @@ class FavouriteScreen extends StatelessWidget {
                                 onPressed: () {
                                   if (count > 1) {
                                     count--;
+                                    setState(() {});
                                   }
                                 },
                                 icon: Icon(

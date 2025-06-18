@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/category.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/favourite.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/featuredproduct.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 
 class BottomBarClass extends StatefulWidget {
   const BottomBarClass({super.key});
@@ -19,9 +22,9 @@ class _BottomBarClassState extends State<BottomBarClass> {
 
   List pages = [
     HomeScreenClass(),
-    HomeScreenClass(),
+    CategoryClass(),
     FavouriteScreen(),
-    HomeScreenClass(),
+    FeaturedProduct(),
   ];
 
   @override

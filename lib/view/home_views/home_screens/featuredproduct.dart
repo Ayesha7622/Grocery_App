@@ -131,64 +131,67 @@ class FeaturedProduct extends StatelessWidget {
                       context,
                     );
                   },
-                  child: Container(
-                    height: 254,
-                    width: 181,
-                    color: AppColors.whiteColor,
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.favorite,
-                                color: AppColors.redColor,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Container(
+                      height: 254,
+                      width: 181,
+                      color: AppColors.whiteColor,
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: AppColors.redColor,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundColor: grocery[index].colr,
-                          backgroundImage: AssetImage(
-                            grocery[index].images.toString(),
+                            ],
                           ),
-                        ),
-                        NormalText(
-                          text: grocery[index].price.toString(),
-                          textColor: AppColors.green,
-                          fontSize: 15,
-                        ),
-                        BoldText(
-                          text: grocery[index].name.toString(),
-                          textColor: AppColors.blackColor,
-                          fontSize: 18,
-                        ),
-                        NormalText(
-                          text: grocery[index].weight.toString(),
-                          textColor: AppColors.greyColor,
-                          fontSize: 13,
-                        ),
-                        Divider(),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 50,
+                          CircleAvatar(
+                            radius: 40,
+                            backgroundColor: grocery[index].colr,
+                            backgroundImage: AssetImage(
+                              grocery[index].images.toString(),
                             ),
-                            Icon(
-                              Icons.shopping_bag_outlined,
-                              color: AppColors.green,
-                            ),
-                            NormalText(
-                              text: 'Add to cart',
-                              fontSize: 15,
-                              textColor: AppColors.blackColor,
-                            ),
-                          ],
-                        )
-                      ],
+                          ),
+                          NormalText(
+                            text: grocery[index].price.toString(),
+                            textColor: AppColors.green,
+                            fontSize: 15,
+                          ),
+                          BoldText(
+                            text: grocery[index].name.toString(),
+                            textColor: AppColors.blackColor,
+                            fontSize: 18,
+                          ),
+                          NormalText(
+                            text: grocery[index].weight.toString(),
+                            textColor: AppColors.greyColor,
+                            fontSize: 13,
+                          ),
+                          Divider(),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 50,
+                              ),
+                              Icon(
+                                Icons.shopping_bag_outlined,
+                                color: AppColors.green,
+                              ),
+                              NormalText(
+                                text: 'Add to cart',
+                                fontSize: 15,
+                                textColor: AppColors.blackColor,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 );
