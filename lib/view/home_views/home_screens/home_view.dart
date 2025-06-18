@@ -5,6 +5,7 @@ import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/ap
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/category.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/featuredproduct.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 
 class ChatsModel {
@@ -412,10 +413,16 @@ class HomeScreenClass extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Icon(
-              Icons.chevron_right,
+            IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FeaturedProduct()));
+              },
+              icon: Icon(
+                Icons.chevron_right,
+                size: 35,
+              ),
               color: AppColors.greyColor,
-              size: 35,
             )
           ],
         ),
