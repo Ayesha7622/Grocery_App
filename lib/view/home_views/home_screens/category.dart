@@ -50,7 +50,7 @@ class CategoryClass extends StatelessWidget {
     ChatsModel(
       color: AppColors.lightblue,
       name: 'Babycare',
-      images: AppIcons.baby,
+      images: AppIcons.vector,
     ),
   ];
 
@@ -61,28 +61,72 @@ class CategoryClass extends StatelessWidget {
       Container(
         width: 414,
         height: 118,
+        decoration: BoxDecoration(
+          color: AppColors.whiteColor,
+        ),
+        child: Row(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: AppColors.blackColor,
+                size: 35,
+              ),
+            ),
+            SizedBox(
+              //height: 30,
+              width: 90,
+            ),
+            Center(
+              child: NormalText(
+                text: 'Categories',
+                fontSize: 21,
+                textColor: AppColors.blackColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(
+                Icons.tune,
+                color: AppColors.blackColor,
+                size: 30,
+              ),
+            )
+          ],
+        ),
       ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Icon(
-            Icons.arrow_back,
-            color: AppColors.blackColor,
-            size: 15,
-          ),
-          NormalText(
-            text: 'Categories',
-            fontSize: 18,
-            textColor: AppColors.blackColor,
-            fontWeight: FontWeight.w500,
-          ),
-          Icon(
-            Icons.tune,
-            color: AppColors.blackColor,
-            size: 15,
-          )
-        ],
-      ),
+      // Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   children: [
+      //     IconButton(
+      //       onPressed: () {
+      //         Navigator.pop(context);
+      //       },
+      //       icon: Icon(
+      //         Icons.arrow_back,
+      //         color: AppColors.blackColor,
+      //         size: 15,
+      //       ),
+      //     ),
+      //     NormalText(
+      //       text: 'Categories',
+      //       fontSize: 18,
+      //       textColor: AppColors.blackColor,
+      //       fontWeight: FontWeight.w500,
+      //     ),
+      //     Icon(
+      //       Icons.tune,
+      //       color: AppColors.blackColor,
+      //       size: 15,
+      //     )
+      //   ],
+      // ),
       SizedBox(
           height: 500,
           child: GridView.builder(
@@ -90,26 +134,40 @@ class CategoryClass extends StatelessWidget {
                   crossAxisCount: 3, mainAxisSpacing: 8, crossAxisSpacing: 8),
               itemCount: grocery.length,
               itemBuilder: (context, i) {
-                return Container(
-                    height: 120,
-                    width: 120,
-                    color: AppColors.whiteColor,
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundColor: grocery[i].color,
-                          backgroundImage: AssetImage(
-                            grocery[i].images.toString(),
-                          ),
+                return InkWell(
+                  onTap: () {},
+                  child: Container(
+                      height: 120,
+                      width: 120,
+                      color: AppColors.whiteColor,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              radius: 40,
+                              backgroundColor: grocery[i].color,
+                              // backgroundImage: AssetImage(
+                              //   grocery[i].images.toString(),
+                              // ),
+                              child: Image(
+                                image: AssetImage(
+                                  grocery[i].images.toString(),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            NormalText(
+                              textColor: AppColors.greyColor,
+                              text: grocery[i].name.toString(),
+                              fontSize: 18,
+                            ),
+                          ],
                         ),
-                        NormalText(
-                          textColor: AppColors.greyColor,
-                          text: grocery[i].name.toString(),
-                          fontSize: 18,
-                        ),
-                      ],
-                    ));
+                      )),
+                );
               }))
     ]));
 

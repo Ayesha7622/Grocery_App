@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 
 class BottomBarClass extends StatefulWidget {
   const BottomBarClass({super.key});
@@ -14,11 +15,17 @@ class _BottomBarClassState extends State<BottomBarClass> {
     setState(() {});
   }
 
-  List pages = [];
+  List pages = [
+    HomeScreenClass(),
+    HomeScreenClass(),
+    HomeScreenClass(),
+    HomeScreenClass(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: pages.elementAt(currentindex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentindex,
         onTap: (index) {
@@ -27,10 +34,12 @@ class _BottomBarClassState extends State<BottomBarClass> {
         }, //onChange
 
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined)),
-          BottomNavigationBarItem(icon: Icon(Icons.person_4_outlined)),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border)),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined)),
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_4_outlined), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart_outlined), label: ''),
         ],
       ),
     );

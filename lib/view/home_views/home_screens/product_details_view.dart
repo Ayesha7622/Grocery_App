@@ -22,6 +22,15 @@ class ProductDetailsView extends StatefulWidget {
 }
 
 class _ProductDetailsViewState extends State<ProductDetailsView> {
+  int count = 1;
+  double per_price = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    per_price = double.parse(widget.price);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +71,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                   Padding(
                     padding: const EdgeInsets.only(left: 5),
                     child: BoldText(
-                      text: widget.price,
+                      text: '\$ ${per_price}',
                       textColor: AppColors.green,
                       fontSize: 23,
                     ),
@@ -159,10 +168,21 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                           Spacer(),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: NormalText(
-                              text: '-',
-                              fontSize: 45,
-                              textColor: AppColors.green,
+                            child: InkWell(
+                              onTap: () {
+                                if (count > 1) {
+                                  count--;
+                                  per_price =
+                                      per_price - double.parse(widget.price);
+
+                                  setState(() {});
+                                }
+                              },
+                              child: NormalText(
+                                text: '-',
+                                fontSize: 45,
+                                textColor: AppColors.green,
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -171,7 +191,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: BoldText(
-                              text: '3',
+                              text: '$count',
                               fontSize: 30,
                               textColor: AppColors.blackColor,
                             ),
@@ -181,10 +201,20 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: NormalText(
-                              text: '+',
-                              fontSize: 45,
-                              textColor: AppColors.green,
+                            child: InkWell(
+                              onTap: () {
+                                count++;
+                                // per_Price=7.0+7.0
+                                // per_price=14+7.0
+                                per_price =
+                                    per_price + double.parse(widget.price);
+                                setState(() {});
+                              },
+                              child: NormalText(
+                                text: '+',
+                                fontSize: 45,
+                                textColor: AppColors.green,
+                              ),
                             ),
                           ),
                         ],

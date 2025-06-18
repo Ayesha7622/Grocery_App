@@ -4,6 +4,7 @@ import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/category.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 
 class ChatsModel {
@@ -31,42 +32,42 @@ class HomeScreenClass extends StatelessWidget {
         //icons: AppIcons.group,
         name: 'FreshPeach',
         images: AppImages.peachImage, //'assets/appImages/peach-24 1.png',
-        price: '${8.00}',
+        price: '\$ ${8.00}',
         weight: 'dozen'),
     ChatsModel(
         colr: AppColors.avacoda,
         //icons: AppIcons.group1,
         name: 'Avacoda',
         images: AppImages.avacodaImage,
-        price: '${7.00}',
+        price: '\$ ${7.00}',
         weight: '2.0 lbs'),
     ChatsModel(
         colr: AppColors.pineapple,
         //icons: AppIcons.beverage,
         name: 'Pineapple',
         images: AppImages.pineImage,
-        price: '${9.90}',
+        price: '\$ ${9.90}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.grapes,
         //icons: AppIcons.group2,
         name: 'Black Grapes',
         images: AppImages.grapesImage,
-        price: '${7.05}',
+        price: '\$ ${7.05}',
         weight: '1.5 lbs'),
     ChatsModel(
         colr: AppColors.anar,
         //icons: AppIcons.group3,
         name: 'Pomegranate',
         images: AppImages.pomeImage,
-        price: '${2.09}',
+        price: '\$ ${2.09}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.roccoli,
         //icons: AppIcons.vacuum,
         name: 'Fresh B roccoli',
         images: AppImages.roccoliImage,
-        price: '${3.00}',
+        price: '\$ ${3.00}',
         weight: '1 kg'),
 
     //   'Fresh Peach',
@@ -229,12 +230,16 @@ class HomeScreenClass extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: BoldText(
                 text: 'Categories',
+                textColor: AppColors.blackColor,
                 fontSize: 23,
               ),
             ),
             Spacer(),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CategoryClass()));
+                },
                 icon: Icon(
                   Icons.chevron_right,
                   color: AppColors.greyColor,
@@ -370,6 +375,26 @@ class HomeScreenClass extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      backgroundColor: AppColors.lightblue,
+                      //backgroundImage: AssetImage(AppIcons.yellow),
+                      child: Image(image: AssetImage(AppIcons.vector)),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    NormalText(
+                      text: 'Babycare',
+                      fontSize: 17,
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -382,6 +407,7 @@ class HomeScreenClass extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: BoldText(
                 text: 'Featured Products',
+                textColor: AppColors.blackColor,
                 fontSize: 23,
               ),
             ),
@@ -397,7 +423,10 @@ class HomeScreenClass extends StatelessWidget {
           height: 500,
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8),
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 0.9),
               itemCount: grocery.length,
               itemBuilder: (context, index) {
                 return InkWell(
@@ -443,6 +472,7 @@ class HomeScreenClass extends StatelessWidget {
                         ),
                         BoldText(
                           text: grocery[index].name.toString(),
+                          textColor: AppColors.blackColor,
                           fontSize: 18,
                         ),
                         NormalText(
@@ -451,10 +481,21 @@ class HomeScreenClass extends StatelessWidget {
                           fontSize: 13,
                         ),
                         Divider(),
-                        NormalText(
-                          text: 'Add to cart',
-                          fontSize: 12,
-                          textColor: AppColors.blackColor,
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 50,
+                            ),
+                            Icon(
+                              Icons.shopping_bag_outlined,
+                              color: AppColors.green,
+                            ),
+                            NormalText(
+                              text: 'Add to cart',
+                              fontSize: 15,
+                              textColor: AppColors.blackColor,
+                            ),
+                          ],
                         )
                       ],
                     ),

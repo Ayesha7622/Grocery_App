@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newgroceryapp/view/auth_views/login_stack.dart';
 import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
+import 'package:newgroceryapp/view/home_views/bottom_bar.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
             //StackScreen()
             //StackScreen2()
             //StackScreen3()
-            HomeScreenClass());
+            BottomBarClass());
   }
 }
 
