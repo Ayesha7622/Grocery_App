@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/favourite.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 
 class BottomBarClass extends StatefulWidget {
@@ -19,7 +20,7 @@ class _BottomBarClassState extends State<BottomBarClass> {
   List pages = [
     HomeScreenClass(),
     HomeScreenClass(),
-    HomeScreenClass(),
+    FavouriteScreen(),
     HomeScreenClass(),
   ];
 
