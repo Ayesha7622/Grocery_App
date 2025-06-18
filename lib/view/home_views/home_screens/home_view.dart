@@ -29,7 +29,7 @@ class HomeScreenClass extends StatelessWidget {
     ChatsModel(
         colr: AppColors.peach,
         //icons: AppIcons.group,
-        name: 'reshPeach',
+        name: 'FreshPeach',
         images: AppImages.peachImage, //'assets/appImages/peach-24 1.png',
         price: '${8.00}',
         weight: 'dozen'),
