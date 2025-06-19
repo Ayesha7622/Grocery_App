@@ -71,68 +71,67 @@ class FeaturedProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
-        Container(
-          width: 414,
-          height: 118,
-          decoration: BoxDecoration(
-            color: AppColors.whiteColor,
-          ),
-          child: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.arrow_back,
-                  color: AppColors.blackColor,
-                  size: 35,
-                ),
-              ),
-              SizedBox(
-                //height: 30,
-                width: 90,
-              ),
-              Center(
-                child: NormalText(
-                  text: 'Vegetables',
-                  fontSize: 21,
-                  textColor: AppColors.blackColor,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(
-                  Icons.tune,
-                  color: AppColors.blackColor,
-                  size: 30,
-                ),
-              )
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 750,
-          child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 8,
-                  crossAxisSpacing: 8,
-                  childAspectRatio: 0.9),
-              itemCount: grocery.length,
-              itemBuilder: (context, index) {
-                return InkWell(
-                  onTap: () {
-                    Navigator.pop(
-                      context,
-                    );
+      body: SingleChildScrollView(
+        child: Column(children: [
+          Container(
+            width: 414,
+            height: 105,
+            decoration: BoxDecoration(
+              color: AppColors.whiteColor,
+            ),
+            child: Row(
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
                   },
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: AppColors.blackColor,
+                    size: 35,
+                  ),
+                ),
+                SizedBox(
+                  //height: 30,
+                  width: 90,
+                ),
+                Center(
+                  child: NormalText(
+                    text: 'Vegetables',
+                    fontSize: 21,
+                    textColor: AppColors.blackColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.tune,
+                    color: AppColors.blackColor,
+                    size: 30,
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 750,
+            child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 8,
+                    childAspectRatio: 0.9),
+                itemCount: grocery.length,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pop(
+                        context,
+                      );
+                    },
                     child: Container(
                       height: 254,
                       width: 181,
@@ -193,11 +192,11 @@ class FeaturedProduct extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
-                );
-              }),
-        )
-      ]),
+                  );
+                }),
+          )
+        ]),
+      ),
     );
   }
 }

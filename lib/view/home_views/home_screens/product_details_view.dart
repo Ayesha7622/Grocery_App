@@ -51,8 +51,11 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child:
-                    IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(Icons.arrow_back)),
               )
             ]),
           ),
@@ -154,7 +157,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                       width: 400,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: AppColors.lightpurple),
+                          color: AppColors.whiteColor),
                       child: Row(
                         children: [
                           Padding(
@@ -186,8 +189,12 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             ),
                           ),
                           SizedBox(
-                            width: 15,
+                            width: 20,
                           ),
+                          Container(
+                              width: 1,
+                              height: 58,
+                              color: AppColors.greyColor.withOpacity(0.3)),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: BoldText(
@@ -197,8 +204,12 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             ),
                           ),
                           SizedBox(
-                            width: 15,
+                            width: 25,
                           ),
+                          Container(
+                              width: 1,
+                              height: 58,
+                              color: AppColors.greyColor.withOpacity(0.3)),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: InkWell(

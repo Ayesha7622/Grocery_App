@@ -66,7 +66,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
         //icons: AppIcons.group3,
         name: 'Pomegranate',
         images: AppImages.pomeImage,
-        price: '\$ ${2.22 * 4}',
+        price: '\$ ${2.224}',
         weight: '1.50 lbs'),
     ChatsModel(
         colr: AppColors.roccoli,
@@ -80,46 +80,32 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(children: [
-      Container(
-        width: 414,
-        height: 118,
-        decoration: BoxDecoration(
-          color: AppColors.whiteColor,
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: AppColors.blackColor,
+              size: 25,
+            ),
+          ),
+          title: NormalText(
+            text: 'Favourite',
+            fontSize: 21,
+            textColor: AppColors.blackColor,
+            fontWeight: FontWeight.w600,
+          ),
         ),
-        child: Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back,
-                color: AppColors.blackColor,
-                size: 35,
-              ),
-            ),
-            SizedBox(
-              //height: 30,
-              width: 90,
-            ),
-            Center(
-              child: NormalText(
-                text: 'Favourites',
-                fontSize: 21,
-                textColor: AppColors.blackColor,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
-      SizedBox(
-          height: 600,
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1, mainAxisSpacing: 8, crossAxisSpacing: 8),
+                  crossAxisCount: 1,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 3),
               itemCount: grocery.length,
               itemBuilder: (context, index) {
                 return InkWell(
@@ -129,31 +115,39 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                     );
                   },
                   child: Container(
-                    height: 100,
+                    height: 80,
                     width: 380,
                     decoration: BoxDecoration(color: AppColors.yite3),
                     child: Row(
                       children: [
-                        CircleAvatar(
-                          radius: 25,
-                          backgroundColor: grocery[index].colr,
-                          child: Image(
-                              image:
-                                  AssetImage(grocery[index].images.toString())),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            radius: 35,
+                            backgroundColor: grocery[index].colr,
+                            child: Image(
+                                image: AssetImage(
+                                    grocery[index].images.toString())),
+                          ),
                         ),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             NormalText(
                               text: grocery[index].price.toString(),
                               textColor: AppColors.green,
+                              fontSize: 15,
                             ),
                             BoldText(
                               text: grocery[index].name.toString(),
                               textColor: AppColors.blackColor,
+                              fontSize: 20,
                             ),
                             NormalText(
                               text: grocery[index].weight.toString(),
                               textColor: AppColors.greyColor,
+                              fontSize: 15,
                             )
                           ],
                         ),
@@ -174,6 +168,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                             NormalText(
                               text: '5',
                               textColor: AppColors.green,
+                              fontSize: 20,
                             ),
                             IconButton(
                                 onPressed: () {
@@ -192,7 +187,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                     ),
                   ),
                 );
-              }))
-    ]));
+              }),
+        ));
   }
 }
