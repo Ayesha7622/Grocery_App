@@ -82,25 +82,31 @@ class ContactClass extends StatelessWidget {
               flex: 80,
               child: Container(color: AppColors.yite3),
             ),
-            Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Column(children: [
               SizedBox(
-                height: 100,
+                height: 80,
               ),
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage(AppImages.girl),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: AppColors.green,
-                      radius: 20,
-                      child: Icon(
-                        Icons.camera_alt_outlined,
-                        color: AppColors.whiteColor,
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage(AppImages.girl),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: CircleAvatar(
+                          backgroundColor: AppColors.green,
+                          radius: 20,
+                          child: Icon(
+                            Icons.camera_alt_outlined,
+                            color: AppColors.whiteColor,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               BoldText(
@@ -113,7 +119,11 @@ class ContactClass extends StatelessWidget {
                   textColor: AppColors.greyColor,
                   fontSize: 23),
             ]),
+            // SizedBox(
+            //   height: 100,
+            // ),
             Column(
+              //crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ListTile(
                   leading: ImageIcon(
