@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 import 'package:newgroceryapp/view/auth_views/login_stack.dart';
 import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
@@ -6,6 +7,7 @@ import 'package:newgroceryapp/view/home_views/bottom_bar.dart';
 import 'package:newgroceryapp/view/home_views/contacts.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
+import 'package:newgroceryapp/view/home_views/notification.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';
@@ -53,7 +55,36 @@ class MyApp extends StatelessWidget {
             //StackScreen2()
             //StackScreen3()
             //BottomBarClass()
-            ContactClass());
+            //ContactClass()
+            //SwitchClass()
+            MyNotification());
+    //      MyNotification());
+  }
+}
+
+// switch button---------
+class SwitchClass extends StatefulWidget {
+  const SwitchClass({super.key});
+
+  @override
+  State<SwitchClass> createState() => _SwitchClassState();
+}
+
+class _SwitchClassState extends State<SwitchClass> {
+  bool isSwitched = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Switch(
+            activeColor: AppColors.green,
+            value: isSwitched,
+            onChanged: (value) {
+              isSwitched = value;
+              setState(() {});
+            }),
+      ),
+    );
   }
 }
 
