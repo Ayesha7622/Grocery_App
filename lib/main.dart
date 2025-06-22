@@ -8,6 +8,7 @@ import 'package:newgroceryapp/view/home_views/contacts.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/product_details_view.dart';
 import 'package:newgroceryapp/view/home_views/notification.dart';
+import 'package:newgroceryapp/view/home_views/order.dart';
 import 'package:newgroceryapp/view/starting_view/intro_screen.dart';
 import 'package:newgroceryapp/view/starting_view/spalsh_screen3.dart';
 import 'package:newgroceryapp/view/starting_view/splash_screen2.dart';
@@ -57,7 +58,8 @@ class MyApp extends StatelessWidget {
             //BottomBarClass()
             //ContactClass()
             //SwitchClass()
-            MyNotification());
+            // NotificationClass()
+            MyOrder());
     //      MyNotification());
   }
 }

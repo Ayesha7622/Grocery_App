@@ -4,8 +4,8 @@ import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/component/myNotification.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
-class MyNotification extends StatelessWidget {
-  const MyNotification({super.key});
+class NotificationClass extends StatelessWidget {
+  const NotificationClass({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,25 +22,30 @@ class MyNotification extends StatelessWidget {
             fontSize: 20,
           ),
         ),
-        body: Column(
-          children: [
-            Notifications(
-                title: 'Allow Notifications',
-                description:
-                    'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
-            Notifications(
-                title: 'Email Notifications',
-                description:
-                    'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
-            Notifications(
-                title: 'Order Notifications',
-                description:
-                    'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
-            Notifications(
-                title: 'General Notifications',
-                description:
-                    'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Notifications(
+                  title: 'Allow Notifications',
+                  description:
+                      'Lorem ipsum dolor sit amet, consetetur sadi \npscing elitr, sed diam nonumym'),
+              Notifications(
+                  title: 'Email Notifications',
+                  description:
+                      'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
+              Notifications(
+                  title: 'Order Notifications',
+                  description:
+                      'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
+              Notifications(
+                  title: 'General Notifications',
+                  description:
+                      'Lorem ipsum dolor sit amet, consetetur sadi\npscing elitr, sed diam nonumym'),
+            ],
+          ),
         )
         // body: Column(
         //   crossAxisAlignment: CrossAxisAlignment.start,
