@@ -44,11 +44,16 @@ class ContactsModel {
   });
 }
 
-class MyOrder extends StatelessWidget {
+class MyOrder extends StatefulWidget {
   MyOrder({
     super.key,
   });
 
+  @override
+  State<MyOrder> createState() => _MyOrderState();
+}
+
+class _MyOrderState extends State<MyOrder> {
   List<ContactsModel> details = [
     ContactsModel(
         boldText: 'Order #90897',
@@ -68,6 +73,7 @@ class MyOrder extends StatelessWidget {
         date4: 'October 20 2021',
         date5: 'pending'),
   ];
+
   bool isExpanded = false;
 
   @override
@@ -100,36 +106,152 @@ class MyOrder extends StatelessWidget {
           itemCount: 4,
           itemBuilder: (context, index) {
             return ExpansionTile(
-              title: Text(details[index].boldText.toString()),
-              leading: CircleAvatar(
-                radius: 15,
-                backgroundColor: AppColors.lightgreen,
-                child: Image(
-                  image: AssetImage(AppIcons.order),
-                  color: AppColors.green,
+                title: Text(details[index].boldText.toString()),
+                leading: CircleAvatar(
+                  radius: 15,
+                  backgroundColor: AppColors.lightgreen,
+                  child: Image(
+                    image: AssetImage(AppIcons.order),
+                    color: AppColors.green,
+                  ),
                 ),
-              ),
-              trailing: isExpanded
-                  ? Icon(Icons.arrow_circle_up)
-                  : Icon(Icons.arrow_circle_down),
-              subtitle: Column(
+                trailing: isExpanded
+                    ? Icon(Icons.arrow_circle_up)
+                    : Icon(
+                        Icons.arrow_circle_down,
+                        color: AppColors.blueColor,
+                      ),
+                subtitle: Column(
+                  children: [
+                    BoldText(text: details[index].normalText.toString()),
+                    Row(
+                      children: [
+                        Row(
+                          children: [
+                            NormalText(
+                              text: details[index].items.toString(),
+                              textColor: AppColors.blackColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            NormalText(
+                              text: details[index].number.toString(),
+                              textColor: AppColors.blackColor,
+                              fontWeight: FontWeight.w400,
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Row(
+                          children: [
+                            NormalText(
+                              text: details[index].price.toString(),
+                              textColor: AppColors.blackColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            NormalText(
+                              text: '\$${details[index].no.toString()}',
+                              textColor: AppColors.blackColor,
+                              fontWeight: FontWeight.w400,
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
                 children: [
                   Row(
                     children: [
-                      Row(
-                        children: [],
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: AppColors.darkgreen,
                       ),
-                      SizedBox(
-                        width: 5,
+                      NormalText(
+                        text: details[index].text1.toString(),
+                        textColor: AppColors.blackColor,
                       ),
-                      Row(
-                        children: [],
+                      Spacer(),
+                      NormalText(
+                        text: details[index].date.toString(),
+                        textColor: AppColors.greyColor,
                       )
                     ],
-                  )
+                  ),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: AppColors.darkgreen,
+                      ),
+                      NormalText(
+                        text: details[index].text2.toString(),
+                        textColor: AppColors.blackColor,
+                      ),
+                      Spacer(),
+                      NormalText(
+                        text: details[index].date2.toString(),
+                        textColor: AppColors.greyColor,
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: AppColors.darkgreen,
+                      ),
+                      NormalText(
+                        text: details[index].text3.toString(),
+                        textColor: AppColors.blackColor,
+                      ),
+                      Spacer(),
+                      NormalText(
+                        text: details[index].date3.toString(),
+                        textColor: AppColors.greyColor,
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: AppColors.darkgreen,
+                      ),
+                      NormalText(
+                        text: details[index].subText.toString(),
+                        textColor: AppColors.greyColor,
+                      ),
+                      Spacer(),
+                      NormalText(
+                        text: details[index].date4.toString(),
+                        textColor: AppColors.greyColor,
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: AppColors.greyColor,
+                      ),
+                      NormalText(
+                        text: details[index].subText2.toString(),
+                        textColor: AppColors.greyColor,
+                      ),
+                      Spacer(),
+                      NormalText(
+                        text: details[index].date5.toString(),
+                        textColor: AppColors.greyColor,
+                      )
+                    ],
+                  ),
                 ],
-              ),
-            );
+                onExpansionChanged: (expanded) {
+                  isExpanded = expanded;
+                  setState(() {});
+                });
           }),
       //
     );
