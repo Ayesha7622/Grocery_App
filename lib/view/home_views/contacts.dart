@@ -5,6 +5,10 @@ import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/ap
 import 'package:newgroceryapp/controller/utils/constants/app_assets/app_images/app_images.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 import 'package:newgroceryapp/model/contact_model.dart';
+import 'package:newgroceryapp/view/home_views/aboutScreen.dart';
+import 'package:newgroceryapp/view/home_views/home_screens/favourite.dart';
+import 'package:newgroceryapp/view/home_views/notification.dart';
+import 'package:newgroceryapp/view/home_views/transactions.dart';
 
 class ContactClass extends StatelessWidget {
   const ContactClass({super.key});
@@ -119,6 +123,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.green,
             ),
             title: BoldText(
+              textalign: TextAlign.start,
               text: 'About me',
               textColor: AppColors.blackColor,
               fontSize: 20,
@@ -129,7 +134,10 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Class_AboutMe()));
+            },
           ),
           ListTile(
             leading: ImageIcon(
@@ -167,7 +175,10 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => FavouriteScreen()));
+            },
           ),
           ListTile(
             leading: ImageIcon(
@@ -221,7 +232,10 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => TensactionClass()));
+            },
           ),
           ListTile(
             leading: ImageIcon(
@@ -239,7 +253,10 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NotificationClass()));
+            },
           ),
           ListTile(
             leading: ImageIcon(
@@ -252,12 +269,6 @@ class ContactClass extends StatelessWidget {
               textColor: AppColors.blackColor,
               fontWeight: FontWeight.w700,
             ),
-            trailing: Icon(
-              Icons.chevron_right,
-              color: AppColors.greyColor,
-              size: 45,
-            ),
-            onTap: () {},
           )
         ]),
       ],

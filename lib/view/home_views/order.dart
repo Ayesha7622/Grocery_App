@@ -11,10 +11,14 @@ class MyOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back,
-          color: AppColors.blackColor,
-        ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: AppColors.blackColor,
+            )),
         title: NormalText(
           text: "My Order",
           textColor: AppColors.blackColor,

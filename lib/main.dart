@@ -3,6 +3,7 @@ import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.d
 import 'package:newgroceryapp/view/auth_views/login_stack.dart';
 import 'package:newgroceryapp/view/auth_views/sign_up_stack.dart';
 import 'package:newgroceryapp/view/auth_views/welcome_stack.dart';
+import 'package:newgroceryapp/view/home_views/aboutScreen.dart';
 import 'package:newgroceryapp/view/home_views/bottom_bar.dart';
 import 'package:newgroceryapp/view/home_views/contacts.dart';
 import 'package:newgroceryapp/view/home_views/home_screens/home_view.dart';
@@ -60,8 +61,10 @@ class MyApp extends StatelessWidget {
             //ContactClass()
             //SwitchClass()
             // NotificationClass()
-            //MyOrder()
-            TensactionClass());
+            MyOrder()
+        //TensactionClass()
+        //Class_AboutMe()
+        );
     //      MyNotification());
   }
 }
