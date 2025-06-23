@@ -129,6 +129,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -148,6 +149,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -165,6 +167,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -182,6 +185,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -199,6 +203,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -216,6 +221,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(
@@ -233,6 +239,7 @@ class ContactClass extends StatelessWidget {
               color: AppColors.greyColor,
               size: 45,
             ),
+            onTap: () {},
           ),
           ListTile(
             leading: ImageIcon(

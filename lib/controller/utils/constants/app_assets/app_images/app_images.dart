@@ -20,4 +20,7 @@ class AppImages {
   static String lemon = 'assets/appImages/lime.png';
   static String girl = 'assets/appImages/girll.png';
   static String box = 'assets/appImages/Box.png';
+  static String circle = 'assets/appImages/Circle.png';
+  static String visa = 'assets/appImages/Visa.png';
+  static String payl = 'assets/appImages/paypal.png';
 }

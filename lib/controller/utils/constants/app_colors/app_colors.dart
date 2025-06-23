@@ -25,6 +25,7 @@ class AppColors {
   static const Color lightblue = Color(0xffDCF4F5);
   static const Color lightpink = Color(0xffFFE8F2);
   static const Color lightgreen = Color(0xffEBFFD7);
+  static const Color darkgreen = Color(0xff28B446);
 
   //gradient
   static const Color yite1 = Color(0xffFFFFFF);
