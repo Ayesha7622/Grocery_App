@@ -2,10 +2,73 @@ import 'package:flutter/material.dart';
 import 'package:newgroceryapp/controller/component/Bold_text_widget.dart';
 import 'package:newgroceryapp/controller/component/Normal_text_widget.dart';
 import 'package:newgroceryapp/controller/component/myorder_widget.dart';
+import 'package:newgroceryapp/controller/utils/constants/app_assets/app_icons/app_icons.dart';
 import 'package:newgroceryapp/controller/utils/constants/app_colors/app_colors.dart';
 
+class ContactsModel {
+  String? boldText;
+  String? normalText;
+  String? items;
+  String? number;
+  String? price;
+  String? no;
+  String? text1;
+  String? text2;
+  String? text3;
+  String? subText;
+  String? subText2;
+  String? date;
+  String? date2;
+  String? date3;
+  String? date4;
+  String? date5;
+  String? date6;
+
+  ContactsModel({
+    required this.boldText,
+    required this.normalText,
+    required this.items,
+    required this.number,
+    required this.price,
+    required this.no,
+    required this.text1,
+    required this.text2,
+    required this.text3,
+    required this.subText,
+    required this.subText2,
+    required this.date,
+    required this.date2,
+    required this.date3,
+    required this.date4,
+    required this.date5,
+  });
+}
+
 class MyOrder extends StatelessWidget {
-  const MyOrder({super.key});
+  MyOrder({
+    super.key,
+  });
+
+  List<ContactsModel> details = [
+    ContactsModel(
+        boldText: 'Order #90897',
+        normalText: 'Placed On October 19 2021',
+        items: 'items',
+        number: '10',
+        price: 'items',
+        no: '16.9',
+        text1: 'Order placed',
+        text2: 'Order confirmed',
+        text3: 'Order shipped',
+        subText: 'Out for delivery',
+        subText2: 'pending',
+        date: 'October 19 2021',
+        date2: 'October 19 2021',
+        date3: 'October 20 2021',
+        date4: 'October 20 2021',
+        date5: 'pending'),
+  ];
+  bool isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,174 +96,42 @@ class MyOrder extends StatelessWidget {
           )
         ],
       ),
-      body: SingleChildScrollView(
-          child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            OrderClass(
-                title: 'Order #90897',
-                description: 'Placed On October 19 2021',
-                items: 'Items: 10',
-                price: 'Items: ${16.90}'),
-            Divider(),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 5,
-                      backgroundColor: AppColors.green,
-                    ),
-                    NormalText(
-                      text: 'Order placed',
-                      textColor: AppColors.blackColor,
-                      fontSize: 12,
-                    ),
-                    Spacer(),
-                    NormalText(
-                      text: 'October 19 2021',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    )
-                  ],
+      body: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (context, index) {
+            return ExpansionTile(
+              title: Text(details[index].boldText.toString()),
+              leading: CircleAvatar(
+                radius: 15,
+                backgroundColor: AppColors.lightgreen,
+                child: Image(
+                  image: AssetImage(AppIcons.order),
+                  color: AppColors.green,
                 ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 5,
-                      backgroundColor: AppColors.green,
-                    ),
-                    NormalText(
-                      text: 'Order confirmed',
-                      textColor: AppColors.blackColor,
-                      fontSize: 12,
-                    ),
-                    Spacer(),
-                    NormalText(
-                      text: 'October 19 2021',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 5,
-                      backgroundColor: AppColors.green,
-                    ),
-                    NormalText(
-                      text: 'Order shipped',
-                      textColor: AppColors.blackColor,
-                      fontSize: 12,
-                    ),
-                    Spacer(),
-                    NormalText(
-                      text: 'October 20 2021',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 5,
-                      backgroundColor: AppColors.green,
-                    ),
-                    NormalText(
-                      text: 'Out for delivery',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    ),
-                    Spacer(),
-                    NormalText(
-                      text: 'October 20 2021',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 5,
-                      backgroundColor: AppColors.greyColor,
-                    ),
-                    NormalText(
-                      text: 'pending',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    ),
-                    Spacer(),
-                    NormalText(
-                      text: 'pending',
-                      textColor: AppColors.greyColor,
-                      fontSize: 12,
-                    )
-                  ],
-                ),
-              ],
-            ),
-            OrderClass(
-                title: 'Order #90897',
-                description: 'Placed On October 19 2021',
-                items: 'Items: 10',
-                price: 'Items: ${16.90}'),
-            OrderClass(
-                title: 'Order #90897',
-                description: 'Placed On October 19 2021',
-                items: 'Items: 10',
-                price: 'Items: ${16.90}'),
-            Divider(),
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 5,
-                  backgroundColor: AppColors.greyColor,
-                ),
-                NormalText(
-                  text: 'Order Delivered',
-                  textColor: AppColors.greyColor,
-                  fontSize: 12,
-                ),
-                Spacer(),
-                NormalText(
-                  text: 'Aug 29 2021',
-                  fontSize: 12,
-                  textColor: AppColors.greyColor,
-                )
-              ],
-            ),
-            OrderClass(
-                title: 'Order #90897',
-                description: 'Placed On October 19 2021',
-                items: 'Items: 10',
-                price: 'Items: ${16.90}'),
-            Divider(),
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 5,
-                  backgroundColor: AppColors.greyColor,
-                ),
-                NormalText(
-                  text: 'Order Delivered',
-                  textColor: AppColors.greyColor,
-                  fontSize: 12,
-                ),
-                Spacer(),
-                NormalText(
-                  text: 'Aug 29 2021',
-                  fontSize: 12,
-                  textColor: AppColors.greyColor,
-                )
-              ],
-            ),
-          ],
-        ),
-      )),
+              ),
+              trailing: isExpanded
+                  ? Icon(Icons.arrow_circle_up)
+                  : Icon(Icons.arrow_circle_down),
+              subtitle: Column(
+                children: [
+                  Row(
+                    children: [
+                      Row(
+                        children: [],
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Row(
+                        children: [],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            );
+          }),
+      //
     );
   }
 }
